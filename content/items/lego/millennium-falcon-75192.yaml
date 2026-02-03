@@ -1,0 +1,25 @@
+id: "lego-75192"
+name: "Millennium Falcon"
+category: "lego"
+status: "owned"
+isGift: false
+tags:
+  - star-wars
+  - ucs
+  - display
+  - large
+retailPrice: 849.99
+purchasePrice: 749.99
+storeUrl: "https://www.lego.com/product/millennium-falcon-75192"
+notes: "Bought during May 4th sale. Took 3 weeks to build."
+images:
+  - "lego/millennium-falcon-75192.jpg"
+dateAdded: "2025-05-04"
+dateBought: "2025-05-04"
+
+# LEGO-specific fields
+setId: "75192"
+partCount: 7541
+isRetired: false
+minifigCount: 7
+yearReleased: 2017

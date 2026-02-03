@@ -1,0 +1,131 @@
+.row {
+  background-color: var(--color-bg-secondary);
+  border-bottom: 1px solid var(--color-border);
+  transition: background-color var(--transition-fast);
+}
+
+.row:last-child {
+  border-bottom: none;
+}
+
+.row:hover {
+  background-color: var(--color-bg-hover);
+}
+
+.rowLink {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-2);
+  padding: var(--space-3) var(--space-4);
+  text-decoration: none;
+  color: inherit;
+}
+
+.rowLink:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: -2px;
+}
+
+@media (min-width: 768px) {
+  .rowLink {
+    display: grid;
+    grid-template-columns: 1fr 200px 120px;
+    gap: var(--space-4);
+    flex-wrap: nowrap;
+  }
+}
+
+.main {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  min-width: 0;
+  flex: 1;
+}
+
+.icon {
+  flex-shrink: 0;
+  font-size: var(--text-xl);
+  opacity: 0.7;
+}
+
+.info {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-2);
+  min-width: 0;
+}
+
+.title {
+  font-size: var(--text-base);
+  font-weight: 500;
+  color: var(--color-text-primary);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.badges {
+  display: flex;
+  gap: var(--space-1);
+}
+
+.badgeGift {
+  font-size: var(--text-sm);
+}
+
+.badgeRetired {
+  font-size: var(--text-xs);
+  color: var(--color-warning);
+  background-color: rgba(255, 204, 0, 0.1);
+  padding: 0 var(--space-1);
+  border-radius: var(--radius-sm);
+}
+
+.details {
+  display: flex;
+  gap: var(--space-2);
+  font-size: var(--text-sm);
+  color: var(--color-text-secondary);
+}
+
+@media (max-width: 767px) {
+  .details {
+    width: 100%;
+    padding-left: calc(var(--text-xl) + var(--space-3));
+  }
+}
+
+.setId {
+  color: var(--color-text-muted);
+}
+
+.parts {
+  color: var(--color-text-muted);
+}
+
+.priceCol {
+  text-align: right;
+}
+
+@media (max-width: 767px) {
+  .priceCol {
+    position: absolute;
+    right: var(--space-4);
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .row {
+    position: relative;
+    padding-right: calc(var(--space-4) + 80px);
+  }
+}
+
+.price {
+  font-weight: 600;
+  color: var(--color-accent);
+}

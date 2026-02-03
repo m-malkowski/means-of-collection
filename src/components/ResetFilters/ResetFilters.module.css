@@ -1,0 +1,28 @@
+.button {
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+  padding: var(--space-1) var(--space-2);
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  background-color: transparent;
+  border: 1px solid var(--color-border);
+  color: var(--color-text-muted);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  white-space: nowrap;
+}
+
+.button:hover {
+  border-color: var(--color-error);
+  color: var(--color-error);
+}
+
+.icon {
+  font-size: var(--text-sm);
+}
+
+.label {
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}

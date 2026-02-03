@@ -1,0 +1,42 @@
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  margin-bottom: var(--space-6);
+}
+
+@media (min-width: 768px) {
+  .header {
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-between;
+  }
+}
+
+.titleArea {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.title {
+  font-size: var(--text-2xl);
+  font-weight: 600;
+  color: var(--color-text-primary);
+}
+
+.prompt {
+  color: var(--color-accent);
+}
+
+.subtitle {
+  font-size: var(--text-sm);
+  color: var(--color-text-secondary);
+  margin-bottom: 0;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+}

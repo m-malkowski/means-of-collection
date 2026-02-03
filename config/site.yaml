@@ -1,0 +1,33 @@
+site:
+  title: "Means of Collection"
+  description: "A static archive of what I own and what I want"
+  author: "Maciej Malkowski"
+  currency: "EUR"
+  currencySymbol: "€"
+  siteUrl: "https://m-malkowski.github.io/means-of-collection"
+
+filters:
+  # Price ranges: <25, 25-50, 50-100, 100-200, 200-500, 500+
+  priceBreakpoints:
+    - 25
+    - 50
+    - 100
+    - 200
+    - 500
+
+  # How long ago items were added
+  ageBuckets:
+    - label: "This week"
+      days: 7
+    - label: "This month"
+      days: 30
+    - label: "This quarter"
+      days: 90
+    - label: "This year"
+      days: 365
+    - label: "Older"
+      days: null
+
+theme:
+  defaultMode: "dark"
+  accentColor: "#00ff00"

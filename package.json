@@ -1,0 +1,48 @@
+{
+  "name": "means-of-collection",
+  "version": "1.0.0",
+  "description": "A static, build-time archive of what I own, what I want, and how LEGO slowly converts income into bricks.",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "develop": "gatsby develop",
+    "start": "gatsby develop",
+    "build": "gatsby build --prefix-paths",
+    "serve": "gatsby serve --prefix-paths",
+    "clean": "gatsby clean",
+    "typecheck": "tsc --noEmit"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/m-malkowski/means-of-collection.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/m-malkowski/means-of-collection/issues"
+  },
+  "homepage": "https://github.com/m-malkowski/means-of-collection#readme",
+  "dependencies": {
+    "fuse.js": "^7.1.0",
+    "gatsby": "^5.16.0",
+    "gatsby-plugin-image": "^3.16.0",
+    "gatsby-plugin-react-helmet": "^6.16.0",
+    "gatsby-plugin-sharp": "^5.16.0",
+    "gatsby-plugin-sitemap": "^6.16.0",
+    "gatsby-source-filesystem": "^5.16.0",
+    "gatsby-transformer-sharp": "^5.16.0",
+    "gatsby-transformer-yaml": "^5.16.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-helmet": "^6.1.0"
+  },
+  "devDependencies": {
+    "@types/node": "^25.2.0",
+    "@types/react": "^19.2.10",
+    "@types/react-helmet": "^6.1.11",
+    "typescript": "^5.9.3"
+  }
+}

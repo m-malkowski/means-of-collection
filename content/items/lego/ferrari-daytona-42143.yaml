@@ -1,0 +1,24 @@
+id: "lego-42143"
+name: "Ferrari Daytona SP3"
+category: "lego"
+status: "owned"
+isGift: true
+tags:
+  - technic
+  - cars
+  - display
+retailPrice: 449.99
+purchasePrice: 449.99
+storeUrl: "https://www.lego.com/product/ferrari-daytona-sp3-42143"
+notes: "Birthday gift from family. Amazing build experience!"
+images:
+  - "lego/ferrari-daytona-42143.jpg"
+dateAdded: "2025-08-20"
+dateBought: "2025-08-20"
+
+# LEGO-specific fields
+setId: "42143"
+partCount: 3778
+isRetired: false
+minifigCount: 0
+yearReleased: 2022

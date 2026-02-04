@@ -131,26 +131,39 @@ theme:
 - Sample LEGO items added
 - Basic pages working
 
-### 🔲 Phase 2: Core UI (Next)
-- Design tokens (CSS variables)
+### ✅ Phase 2: Core UI (Complete)
+- Design tokens (CSS variables for colors, typography, spacing)
 - Layout, Header, Footer components
-- ItemCard, ItemGrid, ViewToggle
+- ItemCard, ItemRow, ItemGrid components
+- ViewToggle (gallery/list view)
+- PageHeader component
 - Responsive styling
 
-### 🔲 Phase 3: Filtering
-- useFilters hook
-- Filter components (search, tags, price, age)
-- URL state sync
-- Fuse.js search
+### ✅ Phase 3: Filtering (Complete)
+- useFilters hook with URL state sync
+- FilterBar container component
+- TextSearch with Fuse.js fuzzy search
+- TagFilter (chip/pill multi-select)
+- PriceRangeFilter (bucket selector)
+- AgeFilter (bucket selector)
+- GiftFilter toggle
+- ResetFilters button
 
-### 🔲 Phase 4: Polish
-- Dark/light theme toggle
-- Item detail pages
-- SEO meta tags
+### ✅ Phase 4: Polish (Complete)
+- Dark/light theme toggle with localStorage persistence
+- System preference detection
+- Animated theme transitions
+- Item detail pages with gatsby-node.ts generation
+- SEO component with Open Graph tags
+- Sitemap generation
+- Accessibility: skip links, focus states, reduced motion support
+- Collection statistics in footer and home page
 
-### 🔲 Phase 5: Deployment
-- GitHub Actions workflow
-- GitHub Pages deploy
+### ✅ Phase 5: Deployment (Complete)
+- GitHub Actions workflow (.github/workflows/deploy.yml)
+- Path prefix configured for GitHub Pages
+- Production build optimized
+- Automated deploy on push to main
 
 ## Conventions
 

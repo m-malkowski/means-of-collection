@@ -57,20 +57,20 @@
 
 .badgeStatus {
   background: var(--color-accent-bg);
-  color: var(--color-accent);
+  color: var(--color-text-inverse);
   border: 1px solid var(--color-accent);
 }
 
 .badgeGift {
-  background: rgba(255, 102, 0, 0.1);
-  color: var(--color-gift);
-  border: 1px solid var(--color-gift);
+  background: var(--color-accent-bg);
+  color: var(--color-text-inverse);
+  border: 1px solid var(--color-accent);
 }
 
 .badgeRetired {
-  background: rgba(255, 51, 51, 0.1);
-  color: var(--color-error);
-  border: 1px solid var(--color-error);
+  background: var(--color-accent-bg);
+  color: var(--color-text-inverse);
+  border: 1px solid var(--color-accent);
 }
 
 .title {
@@ -230,7 +230,7 @@
   align-items: center;
   gap: var(--space-2);
   padding: var(--space-2) var(--space-4);
-  background: var(--color-accent-bg);
+  background: transparent;
   color: var(--color-accent);
   border: 1px solid var(--color-accent);
   border-radius: var(--radius-sm);

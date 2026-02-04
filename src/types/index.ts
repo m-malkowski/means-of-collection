@@ -94,6 +94,9 @@ export interface SortState {
   direction: SortDirection;
 }
 
+// Combined sort option for simpler UI
+export type SortOption = "name-asc" | "name-desc" | "price-asc" | "price-desc" | "date-asc" | "date-desc";
+
 // ============================================
 // View Types
 // ============================================

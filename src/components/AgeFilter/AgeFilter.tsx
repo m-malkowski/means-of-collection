@@ -23,7 +23,6 @@ const AgeFilter: React.FC<AgeFilterProps> = ({
 
   return (
     <div className={styles.wrapper}>
-      <span className={styles.label}>Added:</span>
       <div className={styles.buckets}>
         <button
           type="button"

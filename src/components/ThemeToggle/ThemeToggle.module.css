@@ -25,4 +25,5 @@
 .icon {
   font-size: var(--text-lg);
   line-height: 1;
+  color: var(--color-text-primary);
 }

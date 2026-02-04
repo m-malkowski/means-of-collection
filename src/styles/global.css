@@ -13,6 +13,16 @@
   padding: 0;
 }
 
+html,
+body,
+#___gatsby,
+#gatsby-focus-wrapper {
+  width: 100%;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
 html {
   font-size: 16px;
   -webkit-font-smoothing: antialiased;
@@ -25,7 +35,6 @@ body {
   line-height: var(--leading-normal);
   color: var(--color-text-primary);
   background-color: var(--color-bg-primary);
-  min-height: 100vh;
   transition: background-color var(--transition-normal), 
               color var(--transition-normal);
 }

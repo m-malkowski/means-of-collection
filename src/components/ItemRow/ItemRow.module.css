@@ -79,8 +79,8 @@
 
 .badgeRetired {
   font-size: var(--text-xs);
-  color: var(--color-warning);
-  background-color: rgba(255, 204, 0, 0.1);
+  color: var(--color-text-inverse);
+  background-color: var(--color-accent-bg);
   padding: 0 var(--space-1);
   border-radius: var(--radius-sm);
 }

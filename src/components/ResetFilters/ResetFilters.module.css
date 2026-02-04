@@ -14,8 +14,8 @@
 }
 
 .button:hover {
-  border-color: var(--color-error);
-  color: var(--color-error);
+  border-color: var(--color-accent);
+  color: var(--color-accent);
 }
 
 .icon {

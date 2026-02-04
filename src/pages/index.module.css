@@ -95,22 +95,30 @@
   list-style: none;
   padding: 0;
   margin: 0;
-  background-color: var(--color-bg-secondary);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-sm);
 }
 
 .recentItem {
+  border-top: 1px solid var(--color-border);
+}
+
+.recentItem:last-child {
+  border-bottom: 1px solid var(--color-border);
+}
+
+.recentLink {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   gap: var(--space-2);
   padding: var(--space-3) var(--space-4);
-  border-bottom: 1px solid var(--color-border);
+  text-decoration: none;
+  color: inherit;
+  transition: background-color var(--transition-fast);
 }
 
-.recentItem:last-child {
-  border-bottom: none;
+.recentLink:hover {
+  background-color: var(--color-bg-hover);
+  text-decoration: none;
 }
 
 .recentIcon {

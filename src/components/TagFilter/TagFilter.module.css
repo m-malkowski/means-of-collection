@@ -40,10 +40,10 @@
 .tag.selected {
   background-color: var(--color-accent-bg);
   border-color: var(--color-accent);
-  color: var(--color-accent);
+  color: var(--color-text-inverse);
 }
 
 .tag.selected:hover {
-  background-color: var(--color-accent-bg);
+  background-color: var(--color-accent-dim);
   border-color: var(--color-accent-dim);
 }

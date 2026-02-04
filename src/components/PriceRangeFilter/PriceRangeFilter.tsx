@@ -25,7 +25,6 @@ const PriceRangeFilter: React.FC<PriceRangeFilterProps> = ({
 }) => {
   return (
     <div className={styles.wrapper}>
-      <span className={styles.label}>Price:</span>
       <div className={styles.ranges}>
         <button
           type="button"

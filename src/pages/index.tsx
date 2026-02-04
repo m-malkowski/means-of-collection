@@ -77,16 +77,18 @@ const IndexPage: React.FC<PageProps<HomePageData>> = ({ data }) => {
         <ul className={styles.recentList}>
           {recentItems.map((item) => (
             <li key={item.id} className={styles.recentItem}>
-              <span className={styles.recentIcon}>🧱</span>
-              <span className={styles.recentName}>{item.name}</span>
-              <span className={styles.recentStatus}>
-                [{item.status === "owned" ? "owned" : "wishlist"}]
-              </span>
-              {item.retailPrice && (
-                <span className={styles.recentPrice}>
-                  €{item.retailPrice.toFixed(2)}
+              <Link to={`/item/${item.id}/`} className={styles.recentLink}>
+                <span className={styles.recentIcon}>🧱</span>
+                <span className={styles.recentName}>{item.name}</span>
+                <span className={styles.recentStatus}>
+                  [{item.status === "owned" ? "owned" : "wishlist"}]
                 </span>
-              )}
+                {item.retailPrice && (
+                  <span className={styles.recentPrice}>
+                    €{item.retailPrice.toFixed(2)}
+                  </span>
+                )}
+              </Link>
             </li>
           ))}
         </ul>

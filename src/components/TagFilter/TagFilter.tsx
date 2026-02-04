@@ -18,7 +18,6 @@ const TagFilter: React.FC<TagFilterProps> = ({
 
   return (
     <div className={styles.wrapper}>
-      <span className={styles.label}>Tags:</span>
       <div className={styles.tags}>
         {availableTags.map((tag) => {
           const isSelected = selectedTags.includes(tag);

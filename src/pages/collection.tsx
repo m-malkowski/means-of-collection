@@ -1,11 +1,11 @@
 import * as React from "react";
-import { useState } from "react";
+import { useState, useMemo, useCallback } from "react";
 import type { HeadFC, PageProps } from "gatsby";
 import { graphql } from "gatsby";
-import { Layout, PageHeader, ItemGrid, ViewToggle, FilterBar, SEO } from "../components";
+import { Layout, PageHeader, ItemGrid, ViewToggle, FilterBar, FilterToolbar, SEO } from "../components";
 import { useFilters } from "../hooks";
 import { defaultFilterConfig } from "../utils";
-import type { ItemYamlNode, ViewMode } from "../types";
+import type { ItemYamlNode, ViewMode, SortOption } from "../types";
 
 interface CollectionPageData {
   allLegoYaml: {
@@ -13,8 +13,45 @@ interface CollectionPageData {
   };
 }
 
+// Sort items based on sort option
+function sortItems(items: ItemYamlNode[], sortOption: SortOption): ItemYamlNode[] {
+  const sorted = [...items];
+  sorted.sort((a, b) => {
+    switch (sortOption) {
+      case "name-asc":
+        return a.name.localeCompare(b.name);
+      case "name-desc":
+        return b.name.localeCompare(a.name);
+      case "price-asc":
+        return (a.retailPrice || 0) - (b.retailPrice || 0);
+      case "price-desc":
+        return (b.retailPrice || 0) - (a.retailPrice || 0);
+      case "date-asc":
+        return new Date(a.dateAdded).getTime() - new Date(b.dateAdded).getTime();
+      case "date-desc":
+        return new Date(b.dateAdded).getTime() - new Date(a.dateAdded).getTime();
+      default:
+        return 0;
+    }
+  });
+  return sorted;
+}
+
 const CollectionPage: React.FC<PageProps<CollectionPageData>> = ({ data }) => {
   const [viewMode, setViewMode] = useState<ViewMode>("gallery");
+  const [sortOption, setSortOption] = useState<SortOption>("name-asc");
+  const [showFilters, setShowFilters] = useState(false);
+  const [showSort, setShowSort] = useState(false);
+
+  const toggleFilters = useCallback(() => {
+    setShowFilters(prev => !prev);
+    setShowSort(false);
+  }, []);
+
+  const toggleSort = useCallback(() => {
+    setShowSort(prev => !prev);
+    setShowFilters(false);
+  }, []);
 
   const allItems = data.allLegoYaml.nodes;
   const ownedItems = allItems.filter((item) => item.status === "owned");
@@ -38,8 +75,14 @@ const CollectionPage: React.FC<PageProps<CollectionPageData>> = ({ data }) => {
     syncUrl: true,
   });
 
+  // Sort filtered items
+  const sortedItems = useMemo(
+    () => sortItems(filteredItems, sortOption),
+    [filteredItems, sortOption]
+  );
+
   // Calculate total value of filtered collection
-  const totalValue = filteredItems.reduce(
+  const totalValue = sortedItems.reduce(
     (sum, item) => sum + (item.purchasePrice || item.retailPrice || 0),
     0
   );
@@ -63,8 +106,15 @@ const CollectionPage: React.FC<PageProps<CollectionPageData>> = ({ data }) => {
     <Layout title="Collection" stats={stats}>
       <PageHeader
         title="Collection"
-        subtitle={`${filteredItems.length} items | Value: €${totalValue.toFixed(2)}`}
+        subtitle={`${sortedItems.length} items | Value: €${totalValue.toFixed(2)}`}
       >
+        <FilterToolbar
+          showFilters={showFilters}
+          showSort={showSort}
+          onToggleFilters={toggleFilters}
+          onToggleSort={toggleSort}
+          hasActiveFilters={hasActiveFilters}
+        />
         <ViewToggle viewMode={viewMode} onViewChange={setViewMode} />
       </PageHeader>
 
@@ -81,11 +131,17 @@ const CollectionPage: React.FC<PageProps<CollectionPageData>> = ({ data }) => {
         ageBuckets={defaultFilterConfig.ageBuckets}
         hasActiveFilters={hasActiveFilters}
         currencySymbol="€"
-        resultCount={filteredItems.length}
+        resultCount={sortedItems.length}
         totalCount={ownedItems.length}
+        sortOption={sortOption}
+        onSortChange={setSortOption}
+        showFilters={showFilters}
+        showSort={showSort}
+        onToggleFilters={toggleFilters}
+        onToggleSort={toggleSort}
       />
 
-      <ItemGrid items={filteredItems} viewMode={viewMode} currencySymbol="€" />
+      <ItemGrid items={sortedItems} viewMode={viewMode} currencySymbol="€" />
     </Layout>
   );
 };

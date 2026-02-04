@@ -31,7 +31,7 @@
 
 .button.active {
   background-color: var(--color-accent-bg);
-  color: var(--color-accent);
+  color: var(--color-text-inverse);
 }
 
 .icon {

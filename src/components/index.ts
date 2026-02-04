@@ -11,7 +11,7 @@ export { default as ViewToggle } from "./ViewToggle";
 export { default as PageHeader } from "./PageHeader";
 
 // Filter components
-export { default as FilterBar } from "./FilterBar";
+export { default as FilterBar, FilterToolbar } from "./FilterBar";
 export { default as TextSearch } from "./TextSearch";
 export { default as TagFilter } from "./TagFilter";
 export { default as PriceRangeFilter } from "./PriceRangeFilter";

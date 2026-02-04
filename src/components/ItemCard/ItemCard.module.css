@@ -22,6 +22,14 @@
   height: 100%;
 }
 
+.cardLink:hover {
+  text-decoration: none;
+}
+
+.cardLink:hover .title {
+  text-decoration: underline;
+}
+
 .cardLink:focus-visible {
   outline: 2px solid var(--color-accent);
   outline-offset: -2px;
@@ -139,7 +147,7 @@
 }
 
 .badgeGift {
-  background-color: var(--color-gift);
+  background-color: var(--color-accent-bg);
   color: var(--color-text-inverse);
 }
 
@@ -149,7 +157,7 @@
 }
 
 .badgeRetired {
-  background-color: var(--color-warning);
+  background-color: var(--color-accent-bg);
   color: var(--color-text-inverse);
 }
 

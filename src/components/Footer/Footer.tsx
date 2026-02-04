@@ -57,7 +57,7 @@ const Footer: React.FC<FooterProps> = ({ stats }) => {
 
         <div className={styles.right}>
           <span className={styles.copyright}>
-            © {new Date().getFullYear()} means-of-collection
+            © {new Date().getFullYear()} Maciej Malkowski
           </span>
         </div>
       </div>

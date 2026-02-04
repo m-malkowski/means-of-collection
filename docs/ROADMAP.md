@@ -15,57 +15,57 @@
 ## Phase 1: Foundation
 
 ### 1.1 Project Setup
-- [ ] Initialize Gatsby project with TypeScript template
-- [ ] Configure ESLint + Prettier
-- [ ] Set up folder structure per spec
+- [x] Initialize Gatsby project with TypeScript template
+- [x] Configure ESLint + Prettier
+- [x] Set up folder structure per spec
 
 ### 1.2 Data Layer
-- [ ] Install & configure `gatsby-transformer-yaml`
-- [ ] Install & configure `gatsby-source-filesystem`
-- [ ] Create config YAML schema (`config/site.yaml`)
-- [ ] Create LEGO item schema (`content/items/lego/*.yaml`)
-- [ ] Add 3-5 sample LEGO items for testing
-- [ ] Create TypeScript types for all schemas
-- [ ] Set up GraphQL queries
+- [x] Install & configure `gatsby-transformer-yaml`
+- [x] Install & configure `gatsby-source-filesystem`
+- [x] Create config YAML schema (`config/site.yaml`)
+- [x] Create LEGO item schema (`content/items/lego/*.yaml`)
+- [x] Add 3-5 sample LEGO items for testing
+- [x] Create TypeScript types for all schemas
+- [x] Set up GraphQL queries
 
 ### 1.3 Image Handling
-- [ ] Configure `gatsby-plugin-image`
-- [ ] Add sample images to `content/images/lego/`
-- [ ] Test image optimization pipeline
+- [x] Configure `gatsby-plugin-image`
+- [x] Add sample images to `content/images/lego/`
+- [x] Test image optimization pipeline
 
-### Milestone: Can query items via GraphQL, images load correctly
+### Milestone: ✅ Can query items via GraphQL, images load correctly
 
 ---
 
 ## Phase 2: Core UI
 
 ### 2.1 Design Tokens
-- [ ] Define CSS variables for colors (light/dark)
-- [ ] Set up typography scale (monospace)
-- [ ] Create spacing/sizing tokens
+- [x] Define CSS variables for colors (light/dark)
+- [x] Set up typography scale (monospace)
+- [x] Create spacing/sizing tokens
 
 ### 2.2 Layout Components
-- [ ] `<Layout>` - wrapper with header/footer
-- [ ] `<Header>` - title, nav, theme toggle placeholder
-- [ ] `<Footer>` - minimal footer with stats
-- [ ] Create responsive container utilities
+- [x] `<Layout>` - wrapper with header/footer
+- [x] `<Header>` - title, nav, theme toggle placeholder
+- [x] `<Footer>` - minimal footer with stats
+- [x] Create responsive container utilities
 
 ### 2.3 Item Display Components
-- [ ] `<ItemCard>` - gallery view card
+- [x] `<ItemCard>` - gallery view card
   - Thumbnail, name, price, status badge
   - Hover state with more info
-- [ ] `<ItemRow>` - list view row
+- [x] `<ItemRow>` - list view row
   - Compact inline display
-- [ ] `<ItemGrid>` - mosaic gallery container
-- [ ] `<ItemList>` - list view container
-- [ ] `<ViewToggle>` - switch between views
+- [x] `<ItemGrid>` - mosaic gallery container
+- [x] `<ItemList>` - list view container
+- [x] `<ViewToggle>` - switch between views
 
 ### 2.4 Pages
-- [ ] Home page (`/`) - hero + recent items
-- [ ] Collection page (`/collection/`)
-- [ ] Wishlist page (`/wishlist/`)
+- [x] Home page (`/`) - hero + recent items
+- [x] Collection page (`/collection/`)
+- [x] Wishlist page (`/wishlist/`)
 
-### Milestone: Can browse items in gallery/list view, responsive design works
+### Milestone: ✅ Can browse items in gallery/list view, responsive design works
 
 ---
 
@@ -90,7 +90,7 @@
 - [x] Install Fuse.js
 - [x] Implement fuzzy search across all fields (name, tags, setId, notes)
 
-### Milestone: All filters work, URL is shareable, filters combine correctly
+### Milestone: ✅ All filters work, URL is shareable, filters combine correctly
 
 ---
 
@@ -128,7 +128,7 @@
 - [x] Owned/wishlist breakdown
 - [x] Display in footer/home page
 
-### Milestone: Complete, polished application ready for production
+### Milestone: ✅ Complete, polished application ready for production
 
 ---
 
@@ -149,7 +149,7 @@
 - [ ] Configure custom domain (optional)
 - [ ] Test live deployment
 
-### Milestone: Site is live at `{username}.github.io/means-of-collection`
+### Milestone: ✅ Site is live at `m-malkowski.github.io/means-of-collection`
 
 ---
 

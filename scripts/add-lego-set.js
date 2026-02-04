@@ -2,6 +2,7 @@ const fs = require('fs');
 const path = require('path');
 const csv = require('csv-parser');
 const yaml = require('js-yaml');
+const https = require('https');
 
 const setId = process.argv[2];
 if (!setId) {
@@ -44,7 +45,7 @@ fs.createReadStream(csvPath)
       purchasePrice: '',
       storeUrl: `https://www.lego.com/en-de/product/${slugifiedName}-${found.Number}`,
       notes: '',
-      images: [`lego/${found.Number}.png`],
+      images: [`lego/${found.Number}.jpg`],
       dateAdded: new Date().toISOString().split('T')[0],
       dateBought: '',
       setId: found.Number,
@@ -60,6 +61,27 @@ fs.createReadStream(csvPath)
 
     fs.writeFileSync(filePath, yamlStr);
     console.log(`Created ${filePath}`);
+
+    // Download image
+    const imageUrl = `https://images.brickset.com/sets/images/${found.ImageFilename}.jpg`;
+    const imagePath = path.join(__dirname, '..', 'static', 'images', 'lego', `${found.Number}.jpg`);
+
+    https.get(imageUrl, (res) => {
+      if (res.statusCode !== 200) {
+        console.error(`Failed to download image: ${res.statusCode}`);
+        return;
+      }
+      const fileStream = fs.createWriteStream(imagePath);
+      res.pipe(fileStream);
+      fileStream.on('finish', () => {
+        console.log(`Downloaded image to ${imagePath}`);
+      });
+      fileStream.on('error', (err) => {
+        console.error('Error writing image:', err);
+      });
+    }).on('error', (err) => {
+      console.error('Error downloading image:', err);
+    });
   });
 
 function slugify(text) {

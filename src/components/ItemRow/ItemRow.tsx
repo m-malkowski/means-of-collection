@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Link } from "gatsby";
+import { Link, withPrefix } from "gatsby";
 import type { ItemYamlNode } from "../../types";
 import * as styles from "./ItemRow.module.css";
 
@@ -16,7 +16,17 @@ const ItemRow: React.FC<ItemRowProps> = ({ item, currencySymbol = "€" }) => {
     <article className={styles.row}>
       <Link to={itemUrl} className={styles.rowLink} aria-label={`View details for ${item.name}`}>
         <div className={styles.main}>
-          <div className={styles.icon}>🧱</div>
+          <div className={styles.icon}>
+            {item.images && item.images.length > 0 ? (
+              <img
+                src={withPrefix(`/images/${item.images[0]}`)}
+                alt={item.name}
+                className={styles.thumbnail}
+              />
+            ) : (
+              <span>🧱</span>
+            )}
+          </div>
           <div className={styles.info}>
             <h3 className={styles.title}>{item.name}</h3>
             <div className={styles.badges}>

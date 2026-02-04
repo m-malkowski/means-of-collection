@@ -1,0 +1,21 @@
+id: "lego-3cpo-75398"
+name: "C-3PO™™"
+category: "lego"
+status: "wishlist"
+isGift: true
+tags:
+  - Star Wars
+retailPrice: 139.99
+purchasePrice: 
+storeUrl: "https://www.lego.com/en-de/product/c-3po-75398"
+notes: ""
+images:
+  - "lego/75398.png"
+dateAdded: "2026-02-04"
+
+# LEGO-specific fields
+setId: "75398"
+partCount: 1138
+isRetired: false
+minifigCount: 1
+yearReleased: 2022

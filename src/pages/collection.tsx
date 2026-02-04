@@ -177,6 +177,7 @@ export const query = graphql`
         isRetired
         minifigCount
         yearReleased
+        images
       }
     }
   }

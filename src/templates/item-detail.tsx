@@ -1,5 +1,5 @@
 import * as React from "react";
-import { graphql, Link } from "gatsby";
+import { graphql, Link, withPrefix } from "gatsby";
 import type { PageProps } from "gatsby";
 import { Layout, SEO } from "../components";
 import type { ItemYamlNode } from "../types";
@@ -74,12 +74,20 @@ const ItemDetailTemplate: React.FC<PageProps<ItemDetailData, ItemDetailPageConte
 
           <div className={styles.content}>
             <div className={styles.imageSection}>
-              <div className={styles.imagePlaceholder}>
-                <span className={styles.placeholderIcon}>🧱</span>
-                <span className={styles.placeholderText}>
-                  Image #{item.setId}
-                </span>
-              </div>
+              {item.images && item.images.length > 0 ? (
+                <img
+                  src={withPrefix(`/images/${item.images[0]}`)}
+                  alt={item.name}
+                  className={styles.itemImage}
+                />
+              ) : (
+                <div className={styles.imagePlaceholder}>
+                  <span className={styles.placeholderIcon}>🧱</span>
+                  <span className={styles.placeholderText}>
+                    Image #{item.setId}
+                  </span>
+                </div>
+              )}
             </div>
 
             <div className={styles.details}>

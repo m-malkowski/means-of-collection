@@ -1,6 +1,6 @@
 import * as React from "react";
 import type { HeadFC, PageProps } from "gatsby";
-import { graphql, Link } from "gatsby";
+import { graphql, Link, withPrefix } from "gatsby";
 import { Layout, SEO } from "../components";
 import type { ItemYamlNode } from "../types";
 import * as styles from "./index.module.css";
@@ -78,7 +78,15 @@ const IndexPage: React.FC<PageProps<HomePageData>> = ({ data }) => {
           {recentItems.map((item) => (
             <li key={item.id} className={styles.recentItem}>
               <Link to={`/item/${item.id}/`} className={styles.recentLink}>
-                <span className={styles.recentIcon}>🧱</span>
+                {item.images && item.images.length > 0 ? (
+                  <img
+                    src={withPrefix(`/images/${item.images[0]}`)}
+                    alt={item.name}
+                    className={styles.recentIcon}
+                  />
+                ) : (
+                  <span className={styles.recentIcon}>🧱</span>
+                )}
                 <span className={styles.recentName}>{item.name}</span>
                 <span className={styles.recentStatus}>
                   [{item.status === "owned" ? "owned" : "wishlist"}]
@@ -130,6 +138,7 @@ export const query = graphql`
         purchasePrice
         dateAdded
         setId
+        images
       }
     }
   }

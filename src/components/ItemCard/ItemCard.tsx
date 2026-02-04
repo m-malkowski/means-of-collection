@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Link } from "gatsby";
+import { Link, withPrefix } from "gatsby";
 import type { ItemYamlNode } from "../../types";
 import * as styles from "./ItemCard.module.css";
 
@@ -24,13 +24,20 @@ const ItemCard: React.FC<ItemCardProps> = ({ item, currencySymbol = "€" }) => 
     <article className={styles.card}>
       <Link to={itemUrl} className={styles.cardLink} aria-label={`View details for ${item.name}`}>
         <div className={styles.imageContainer}>
-          {/* Placeholder for image - will be enhanced in Phase 4 */}
-          <div className={styles.imagePlaceholder}>
-            <span className={styles.placeholderIcon}>🧱</span>
-            {item.setId && (
-              <span className={styles.setIdOverlay}>#{item.setId}</span>
-            )}
-          </div>
+          {item.images && item.images.length > 0 ? (
+            <img
+              src={withPrefix(`/images/${item.images[0]}`)}
+              alt={item.name}
+              className={styles.itemImage}
+            />
+          ) : (
+            <div className={styles.imagePlaceholder}>
+              <span className={styles.placeholderIcon}>🧱</span>
+              {item.setId && (
+                <span className={styles.setIdOverlay}>#{item.setId}</span>
+              )}
+            </div>
+          )}
         </div>
 
         <div className={styles.content}>

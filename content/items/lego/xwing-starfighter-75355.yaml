@@ -1,0 +1,24 @@
+id: "lego-xwing-starfighter-75355"
+name: "X-wing Starfighter"
+category: "lego"
+status: "wishlist"
+isGift: false
+tags:
+  - Star Wars
+  - Ultimate Collector Series
+  - Aliexpress
+retailPrice: 56
+purchasePrice: 
+storeUrl: "https://de.aliexpress.com/item/1005010789825211.html?spm=a2g0o.productlist.main.1.5cff776eJpC8NH&algo_pvid=1c8d3097-ce8b-4dae-bc57-9fb5d4355db1&algo_exp_id=1c8d3097-ce8b-4dae-bc57-9fb5d4355db1-0&pdp_ext_f=%7B%22order%22%3A%226%22%2C%22eval%22%3A%221%22%2C%22fromPage%22%3A%22search%22%7D&pdp_npi=6%40dis%21EUR%21129.46%2155.99%21%21%211035.68%21447.92%21%402103868817702347752027420e130d%2112000053515532775%21sea%21DE%21171554418%21X%211%210%21n_tag%3A-29919%3Bd%3A21e8c569%3Bm03_new_user%3A-29895%3BpisId%3A5000000200524260&curPageLogUid=GaJP2MGQTBxF&utparam-url=scene%3Asearch%7Cquery_from%3A%7Cx_object_id%3A1005010789825211%7C_p_origin_prod%3A"
+notes: ""
+images:
+  - "lego/75355.jpg"
+dateAdded: "2026-02-04"
+dateBought: 
+
+# LEGO-specific fields
+setId: "75355"
+partCount:  2738
+isRetired: true
+minifigCount: 2
+yearReleased: 2023

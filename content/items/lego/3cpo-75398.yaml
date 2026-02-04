@@ -1,5 +1,5 @@
 id: "lego-3cpo-75398"
-name: "C-3PO™™"
+name: "C-3PO"
 category: "lego"
 status: "wishlist"
 isGift: true
@@ -12,6 +12,7 @@ notes: ""
 images:
   - "lego/75398.png"
 dateAdded: "2026-02-04"
+dateBought: 
 
 # LEGO-specific fields
 setId: "75398"

@@ -1,0 +1,23 @@
+id: "lego-wildflower-bouquet-10313"
+name: "Wildflower Bouquet"
+category: "lego"
+status: "owned"
+isGift: false
+tags:
+  - Botanical Collection
+  - Icons
+retailPrice: 59.99
+purchasePrice: 49.99
+storeUrl: "https://www.lego.com/en-de/product/wildflower-bouquet-10313"
+notes: "Bday gift"
+images:
+  - "lego/10313.webp"
+dateAdded: "2020-01-01"
+dateBought: "2022-03-01"
+
+# LEGO-specific fields
+setId: "10313"
+partCount: 939
+isRetired: false
+minifigCount: 0
+yearReleased: 2023

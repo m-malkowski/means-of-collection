@@ -1,0 +1,24 @@
+id: "lego-atat-75313"
+name: "AT-AT"
+category: "lego"
+status: "wishlist"
+isGift: false
+tags:
+  - Star Wars
+  - Ultimate Collector Series
+  - Aliexpress
+retailPrice: 160
+purchasePrice: 
+storeUrl: "https://de.aliexpress.com/item/1005010766084479.html?spm=a2g0o.productlist.main.2.1c6a3497BdSno4&algo_pvid=95b8bf72-99e2-473c-a967-b03950d2dd98&algo_exp_id=95b8bf72-99e2-473c-a967-b03950d2dd98-1&pdp_ext_f=%7B%22order%22%3A%2210%22%2C%22spu_best_type%22%3A%22price%22%2C%22eval%22%3A%221%22%2C%22fromPage%22%3A%22search%22%7D&pdp_npi=6%40dis%21EUR%21202.17%21157.69%21%21%211617.36%211261.52%21%40211b61ae17702321395283256e02eb%2112000053435604432%21sea%21DE%21171554418%21X%211%210%21n_tag%3A-29919%3Bd%3A21e8c569%3Bm03_new_user%3A-29895&curPageLogUid=xBaKpVftn1fn&utparam-url=scene%3Asearch%7Cquery_from%3A%7Cx_object_id%3A1005010766084479%7C_p_origin_prod%3A"
+notes: ""
+images:
+  - "lego/75313.jpg"
+dateAdded: "2026-02-04"
+dateBought: 
+
+# LEGO-specific fields
+setId: "75313"
+partCount:  6785
+isRetired: true
+minifigCount: 9
+yearReleased: 2021

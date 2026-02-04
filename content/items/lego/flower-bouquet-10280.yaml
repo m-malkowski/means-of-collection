@@ -1,22 +1,20 @@
-id: "lego-flower-bouquet-10280"
-name: "Flower  Bouquet"
-category: "lego"
-status: "owned"
+id: lego-flower-bouquet-10280
+name: Flower  Bouquet
+category: lego
+status: owned
 isGift: false
 tags:
   - Botanical Collection
   - Icons
 retailPrice: 59.99
 purchasePrice: 59.99
-storeUrl: "https://www.lego.com/en-de/product/wildflower-bouquet-10280"
-notes: "Bday gift"
+storeUrl: https://www.lego.com/en-de/product/wildflower-bouquet-10280
+notes: Bday gift
 images:
-  - "lego/10280.png"
-dateAdded: "2020-01-01"
-dateBought: "2023-03-01"
-
-# LEGO-specific fields
-setId: "10280"
+  - lego/10280.png
+dateAdded: '2020-01-01'
+dateBought: '2023-03-01'
+setId: '10280'
 partCount: 756
 isRetired: false
 minifigCount: 0

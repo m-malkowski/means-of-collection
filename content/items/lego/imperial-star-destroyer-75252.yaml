@@ -1,24 +1,22 @@
-id: "lego-imperial-star-destroyer-75252"
-name: "Imperial Star Destroyer"
-category: "lego"
-status: "wishlist"
+id: lego-imperial-star-destroyer-75252
+name: Imperial Star Destroyer
+category: lego
+status: wishlist
 isGift: false
 tags:
   - Star Wars
   - Ultimate Collector Series
   - Aliexpress
 retailPrice: 130
-purchasePrice: 
-storeUrl: "https://de.aliexpress.com/item/1005009460547294.html?spm=a2g0o.productlist.main.2.108978d6leeH5V&algo_pvid=c7b766e3-8046-4491-a0c7-92e8a84acb40&algo_exp_id=c7b766e3-8046-4491-a0c7-92e8a84acb40-1&pdp_ext_f=%7B%22order%22%3A%22923%22%2C%22eval%22%3A%221%22%2C%22orig_sl_item_id%22%3A%221005009460547294%22%2C%22orig_item_id%22%3A%221005010123611246%22%2C%22fromPage%22%3A%22search%22%7D&pdp_npi=6%40dis%21EUR%21303.16%21133.39%21%21%212425.28%211067.12%21%4021039a5b17702341765823622ed6e4%2112000049174538337%21sea%21DE%21171554418%21X%211%210%21n_tag%3A-29919%3Bd%3A21e8c569%3Bm03_new_user%3A-29895&curPageLogUid=40X06RHz5zac&utparam-url=scene%3Asearch%7Cquery_from%3A%7Cx_object_id%3A1005009460547294%7C_p_origin_prod%3A1005010123611246"
-notes: ""
+purchasePrice: null
+storeUrl: >-
+  https://de.aliexpress.com/item/1005009460547294.html?spm=a2g0o.productlist.main.2.108978d6leeH5V&algo_pvid=c7b766e3-8046-4491-a0c7-92e8a84acb40&algo_exp_id=c7b766e3-8046-4491-a0c7-92e8a84acb40-1&pdp_ext_f=%7B%22order%22%3A%22923%22%2C%22eval%22%3A%221%22%2C%22orig_sl_item_id%22%3A%221005009460547294%22%2C%22orig_item_id%22%3A%221005010123611246%22%2C%22fromPage%22%3A%22search%22%7D&pdp_npi=6%40dis%21EUR%21303.16%21133.39%21%21%212425.28%211067.12%21%4021039a5b17702341765823622ed6e4%2112000049174538337%21sea%21DE%21171554418%21X%211%210%21n_tag%3A-29919%3Bd%3A21e8c569%3Bm03_new_user%3A-29895&curPageLogUid=40X06RHz5zac&utparam-url=scene%3Asearch%7Cquery_from%3A%7Cx_object_id%3A1005009460547294%7C_p_origin_prod%3A1005010123611246
 images:
-  - "lego/75252.jpg"
-dateAdded: "2026-02-04"
-dateBought: 
-
-# LEGO-specific fields
-setId: "75252"
-partCount:  4784
+  - lego/75252.jpg
+dateAdded: '2026-02-04'
+dateBought: null
+setId: '75252'
+partCount: 4784
 isRetired: true
 minifigCount: 2
 yearReleased: 2019

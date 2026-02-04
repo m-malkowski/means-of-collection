@@ -1,22 +1,19 @@
-id: "lego-bb8-75452"
-name: "BB-8™ Astromech Droid"
-category: "lego"
-status: "wishlist"
+id: lego-bb8-75452
+name: BB-8™ Astromech Droid
+category: lego
+status: wishlist
 isGift: true
 tags:
   - Star Wars
   - Episode VII
 retailPrice: 59.99
-purchasePrice: 
-storeUrl: "https://www.lego.com/en-de/product/bb-8-astromech-droid-75452"
-notes: ""
+purchasePrice: null
+storeUrl: https://www.lego.com/en-de/product/bb-8-astromech-droid-75452
 images:
-  - "lego/75452.jpg"
-dateAdded: "2026-02-04"
-dateBought: 
-
-# LEGO-specific fields
-setId: "75452"
+  - lego/75452.jpg
+dateAdded: '2026-02-04'
+dateBought: null
+setId: '75452'
 partCount: 569
 isRetired: false
 minifigCount: 1

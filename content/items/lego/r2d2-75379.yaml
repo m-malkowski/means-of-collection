@@ -1,21 +1,19 @@
-id: "lego-r2d2-75379"
-name: "R2-D2"
-category: "lego"
-status: "owned"
+id: lego-r2d2-75379
+name: R2-D2
+category: lego
+status: owned
 isGift: false
 tags:
   - Star Wars
 retailPrice: 99.99
 purchasePrice: 69.99
-storeUrl: "https://www.lego.com/en-de/product/r2-d2-75379"
-notes: "First one"
+storeUrl: https://www.lego.com/en-de/product/r2-d2-75379
+notes: First one
 images:
-  - "lego/75379.webp"
-dateAdded: "2026-01-30"
-dateBought: "2026-02-02"
-
-# LEGO-specific fields
-setId: "75379"
+  - lego/75379.webp
+dateAdded: '2026-01-30'
+dateBought: '2026-02-02'
+setId: '75379'
 partCount: 1050
 isRetired: false
 minifigCount: 3

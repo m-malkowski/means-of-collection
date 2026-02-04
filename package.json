@@ -13,7 +13,8 @@
     "serve": "gatsby serve --prefix-paths",
     "clean": "gatsby clean",
     "typecheck": "tsc --noEmit",
-    "add-lego-set": "node scripts/add-lego-set.js"
+    "add-lego-set": "node scripts/add-lego-set.js",
+    "fix-yaml": "node scripts/fix-yaml.js"
   },
   "repository": {
     "type": "git",

@@ -40,6 +40,7 @@
   aspect-ratio: 4 / 3;
   background-color: var(--color-bg-tertiary);
   overflow: hidden;
+  padding: var(--space-4);
 }
 
 .itemImage {

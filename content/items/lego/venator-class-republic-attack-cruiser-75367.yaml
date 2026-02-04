@@ -1,22 +1,19 @@
-id: "lego-venator-class-republic-attack-cruiser-75367"
-name: "Venator-class Republic Attack Cruiser"
-category: "lego"
-status: "wishlist"
+id: lego-venator-class-republic-attack-cruiser-75367
+name: Venator-class Republic Attack Cruiser
+category: lego
+status: wishlist
 isGift: false
 tags:
   - Star Wars
   - Ultimate Collector Series
 retailPrice: 649.99
-purchasePrice: 
-storeUrl: "https://www.lego.com/en-de/product/venator-class-republic-attack-cruiser-75367"
-notes: ""
+purchasePrice: null
+storeUrl: https://www.lego.com/en-de/product/venator-class-republic-attack-cruiser-75367
 images:
-  - "lego/75367.jpg"
-dateAdded: "2026-02-04"
-dateBought: 
-
-# LEGO-specific fields
-setId: "75367"
+  - lego/75367.jpg
+dateAdded: '2026-02-04'
+dateBought: null
+setId: '75367'
 partCount: 5374
 isRetired: false
 minifigCount: 1

@@ -1,22 +1,19 @@
-id: "lego-millennium-falcon-75192"
-name: "Millennium Falcon™"
-category: "lego"
-status: "wishlist"
+id: lego-millennium-falcon-75192
+name: Millennium Falcon™
+category: lego
+status: wishlist
 isGift: false
 tags:
   - Star Wars
   - Ultimate Collector Series
 retailPrice: 849.99
-purchasePrice: 
-storeUrl: "https://www.lego.com/en-de/product/millennium-falcon-75192"
-notes: ""
+purchasePrice: null
+storeUrl: https://www.lego.com/en-de/product/millennium-falcon-75192
 images:
-  - "lego/75192.png"
-dateAdded: "2026-02-04"
-dateBought: 
-
-# LEGO-specific fields
-setId: "75192"
+  - lego/75192.png
+dateAdded: '2026-02-04'
+dateBought: null
+setId: '75192'
 partCount: 7541
 isRetired: false
 minifigCount: 1

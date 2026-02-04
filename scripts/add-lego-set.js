@@ -55,6 +55,13 @@ fs.createReadStream(csvPath)
       yearReleased: parseInt(found.YearFrom) || 0
     };
 
+    // Remove empty string values to omit them in YAML
+    Object.keys(yamlData).forEach(key => {
+      if (yamlData[key] === '') {
+        delete yamlData[key];
+      }
+    });
+
     const yamlStr = yaml.dump(yamlData, { indent: 2 });
     const fileName = `${slugifiedName}-${found.Number}.yaml`;
     const filePath = path.join(__dirname, '..', 'content', 'items', 'lego', fileName);

@@ -1510,6 +1510,7 @@ type LegoYaml = Node & {
   readonly tags: Maybe<ReadonlyArray<Maybe<Scalars['String']>>>;
   readonly yamlId: Maybe<Scalars['String']>;
   readonly yearReleased: Maybe<Scalars['Int']>;
+  readonly yearRetired: Maybe<Scalars['Int']>;
 };
 
 type LegoYamlConnection = {
@@ -1580,6 +1581,7 @@ type LegoYamlFieldSelector = {
   readonly tags: InputMaybe<FieldSelectorEnum>;
   readonly yamlId: InputMaybe<FieldSelectorEnum>;
   readonly yearReleased: InputMaybe<FieldSelectorEnum>;
+  readonly yearRetired: InputMaybe<FieldSelectorEnum>;
 };
 
 type LegoYamlFilterInput = {
@@ -1605,6 +1607,7 @@ type LegoYamlFilterInput = {
   readonly tags: InputMaybe<StringQueryOperatorInput>;
   readonly yamlId: InputMaybe<StringQueryOperatorInput>;
   readonly yearReleased: InputMaybe<IntQueryOperatorInput>;
+  readonly yearRetired: InputMaybe<IntQueryOperatorInput>;
 };
 
 type LegoYamlFilterListInput = {
@@ -1675,6 +1678,7 @@ type LegoYamlSortInput = {
   readonly tags: InputMaybe<SortOrderEnum>;
   readonly yamlId: InputMaybe<SortOrderEnum>;
   readonly yearReleased: InputMaybe<SortOrderEnum>;
+  readonly yearRetired: InputMaybe<SortOrderEnum>;
 };
 
 /** Node Interface */
@@ -1983,6 +1987,7 @@ type Query_legoYamlArgs = {
   tags: InputMaybe<StringQueryOperatorInput>;
   yamlId: InputMaybe<StringQueryOperatorInput>;
   yearReleased: InputMaybe<IntQueryOperatorInput>;
+  yearRetired: InputMaybe<IntQueryOperatorInput>;
 };
 
 
@@ -2857,7 +2862,7 @@ type WebPOptions = {
 type CollectionPageQueryQueryVariables = Exact<{ [key: string]: never; }>;
 
 
-type CollectionPageQueryQuery = { readonly allLegoYaml: { readonly nodes: ReadonlyArray<{ readonly id: string, readonly name: string, readonly category: string, readonly status: string, readonly isGift: boolean, readonly tags: ReadonlyArray<string | null> | null, readonly retailPrice: number | null, readonly purchasePrice: number | null, readonly storeUrl: string | null, readonly notes: string | null, readonly dateAdded: string, readonly dateBought: string | null, readonly setId: string | null, readonly partCount: number | null, readonly isRetired: boolean | null, readonly minifigCount: number | null, readonly yearReleased: number | null, readonly images: ReadonlyArray<string | null> | null }> } };
+type CollectionPageQueryQuery = { readonly allLegoYaml: { readonly nodes: ReadonlyArray<{ readonly id: string, readonly name: string, readonly category: string, readonly status: string, readonly isGift: boolean, readonly tags: ReadonlyArray<string | null> | null, readonly retailPrice: number | null, readonly purchasePrice: number | null, readonly storeUrl: string | null, readonly notes: string | null, readonly dateAdded: string, readonly dateBought: string | null, readonly setId: string | null, readonly partCount: number | null, readonly yearRetired: number | null, readonly minifigCount: number | null, readonly yearReleased: number | null, readonly images: ReadonlyArray<string | null> | null }> } };
 
 type GatsbyImageSharpFixedFragment = { readonly base64: string | null, readonly width: number, readonly height: number, readonly src: string, readonly srcSet: string };
 
@@ -2895,7 +2900,7 @@ type ItemDetailQueryQueryVariables = Exact<{
 }>;
 
 
-type ItemDetailQueryQuery = { readonly legoYaml: { readonly id: string, readonly name: string, readonly category: string, readonly status: string, readonly isGift: boolean, readonly tags: ReadonlyArray<string | null> | null, readonly retailPrice: number | null, readonly purchasePrice: number | null, readonly storeUrl: string | null, readonly notes: string | null, readonly images: ReadonlyArray<string | null> | null, readonly dateAdded: string, readonly dateBought: string | null, readonly setId: string | null, readonly partCount: number | null, readonly isRetired: boolean | null, readonly minifigCount: number | null, readonly yearReleased: number | null } | null };
+type ItemDetailQueryQuery = { readonly legoYaml: { readonly id: string, readonly name: string, readonly category: string, readonly status: string, readonly isGift: boolean, readonly tags: ReadonlyArray<string | null> | null, readonly retailPrice: number | null, readonly purchasePrice: number | null, readonly storeUrl: string | null, readonly notes: string | null, readonly images: ReadonlyArray<string | null> | null, readonly dateAdded: string, readonly dateBought: string | null, readonly setId: string | null, readonly partCount: number | null, readonly yearRetired: number | null, readonly minifigCount: number | null, readonly yearReleased: number | null } | null };
 
 type SEOQueryQueryVariables = Exact<{ [key: string]: never; }>;
 
@@ -2905,7 +2910,7 @@ type SEOQueryQuery = { readonly site: { readonly siteMetadata: { readonly title:
 type WishlistPageQueryQueryVariables = Exact<{ [key: string]: never; }>;
 
 
-type WishlistPageQueryQuery = { readonly allLegoYaml: { readonly nodes: ReadonlyArray<{ readonly id: string, readonly name: string, readonly category: string, readonly status: string, readonly isGift: boolean, readonly tags: ReadonlyArray<string | null> | null, readonly retailPrice: number | null, readonly purchasePrice: number | null, readonly storeUrl: string | null, readonly notes: string | null, readonly dateAdded: string, readonly dateBought: string | null, readonly setId: string | null, readonly partCount: number | null, readonly isRetired: boolean | null, readonly minifigCount: number | null, readonly yearReleased: number | null, readonly images: ReadonlyArray<string | null> | null }> } };
+type WishlistPageQueryQuery = { readonly allLegoYaml: { readonly nodes: ReadonlyArray<{ readonly id: string, readonly name: string, readonly category: string, readonly status: string, readonly isGift: boolean, readonly tags: ReadonlyArray<string | null> | null, readonly retailPrice: number | null, readonly purchasePrice: number | null, readonly storeUrl: string | null, readonly notes: string | null, readonly dateAdded: string, readonly dateBought: string | null, readonly setId: string | null, readonly partCount: number | null, readonly yearRetired: number | null, readonly minifigCount: number | null, readonly yearReleased: number | null, readonly images: ReadonlyArray<string | null> | null }> } };
 
 type AllItemsForPagesQueryVariables = Exact<{ [key: string]: never; }>;
 

@@ -26,10 +26,16 @@ fs.createReadStream(csvPath)
       process.exit(1);
     }
 
-    // Parse exit date
+    // Parse exit date from "DD/MM/YYYY HH:mm:ss" to extract just the year
     const exitDateStr = found.ExitDate;
-    const exitDate = exitDateStr ? new Date(exitDateStr.replace(/(\d{2})\/(\d{2})\/(\d{4})/, '$3-$2-$1')) : null;
-    const isRetired = exitDate && new Date() > exitDate;
+    let yearRetired = null;
+    if (exitDateStr && exitDateStr.trim()) {
+      // Extract parts: "DD/MM/YYYY HH:mm:ss" -> YYYY (as number)
+      const parts = exitDateStr.trim().split(' ')[0].split('/');
+      if (parts.length === 3) {
+        yearRetired = parseInt(parts[2], 10);
+      }
+    }
 
     // Slugify name for id and filename
     const slugifiedName = slugify(found.SetName);
@@ -50,10 +56,14 @@ fs.createReadStream(csvPath)
       dateBought: '',
       setId: found.Number,
       partCount: parseInt(found.Pieces) || 0,
-      isRetired: isRetired,
       minifigCount: parseInt(found.Minifigs) || 0,
       yearReleased: parseInt(found.YearFrom) || 0
     };
+
+    // Only add yearRetired if it exists (set has been retired)
+    if (yearRetired) {
+      yamlData.yearRetired = yearRetired;
+    }
 
     // Remove empty string values to omit them in YAML
     Object.keys(yamlData).forEach(key => {

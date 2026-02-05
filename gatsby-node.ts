@@ -85,7 +85,7 @@ export const createSchemaCustomization: GatsbyNode["createSchemaCustomization"] 
       dateBought: String
       setId: String
       partCount: Int
-      isRetired: Boolean
+      yearRetired: Int
       minifigCount: Int
       yearReleased: Int
     }

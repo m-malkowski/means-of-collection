@@ -1,6 +1,7 @@
 import * as React from "react";
 import { Link, withPrefix } from "gatsby";
 import type { ItemYamlNode } from "../../types";
+import { isRetired } from "../../utils/retired";
 import * as styles from "./ItemRow.module.css";
 
 interface ItemRowProps {
@@ -33,7 +34,7 @@ const ItemRow: React.FC<ItemRowProps> = ({ item, currencySymbol = "€" }) => {
               {item.isGift && (
                 <span className={styles.badgeGift}>🎁</span>
               )}
-              {item.isRetired && (
+              {isRetired(item.yearRetired) && (
                 <span className={styles.badgeRetired}>RETIRED</span>
               )}
             </div>

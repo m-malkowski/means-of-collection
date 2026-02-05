@@ -1,6 +1,7 @@
 import * as React from "react";
 import { Link, withPrefix } from "gatsby";
 import type { ItemYamlNode } from "../../types";
+import { isRetired } from "../../utils/retired";
 import * as styles from "./ItemCard.module.css";
 
 interface ItemCardProps {
@@ -78,7 +79,7 @@ const ItemCard: React.FC<ItemCardProps> = ({ item, currencySymbol = "€" }) => 
                   🎁 {item.status === "owned" ? "GIFT" : "GIFT IDEA"}
                 </span>
               )}
-              {item.isRetired && (
+              {isRetired(item.yearRetired) && (
                 <span className={`${styles.badge} ${styles.badgeRetired}`}>
                   RETIRED
                 </span>

@@ -9,14 +9,13 @@ tags:
   - Aliexpress
 retailPrice: 80
 purchasePrice: null
-storeUrl: >-
-  https://de.aliexpress.com/item/1005010537165803.html?spm=a2g0o.productlist.main.3.11cf78d49K3QQn&algo_pvid=802627d1-afc5-4797-8ffd-30cffdb7dc64&algo_exp_id=802627d1-afc5-4797-8ffd-30cffdb7dc64-2&pdp_ext_f=%7B%22order%22%3A%2282%22%2C%22spu_best_type%22%3A%22price%22%2C%22eval%22%3A%221%22%2C%22fromPage%22%3A%22search%22%7D&pdp_npi=6%40dis%21EUR%21177.65%2177.39%21%21%211421.20%21619.12%21%402103894417702343282193991e8b06%2112000052741267042%21sea%21DE%21171554418%21X%211%210%21n_tag%3A-29919%3Bd%3A21e8c569%3Bm03_new_user%3A-29895%3BpisId%3A5000000200524260&curPageLogUid=BbTd2kscUy6C&utparam-url=scene%3Asearch%7Cquery_from%3A%7Cx_object_id%3A1005010537165803%7C_p_origin_prod%3A
+storeUrl: https://de.aliexpress.com/item/1005010537165803.html?spm=a2g0o.productlist.main.3.11cf78d49K3QQn&algo_pvid=802627d1-afc5-4797-8ffd-30cffdb7dc64&algo_exp_id=802627d1-afc5-4797-8ffd-30cffdb7dc64-2&pdp_ext_f=%7B%22order%22%3A%2282%22%2C%22spu_best_type%22%3A%22price%22%2C%22eval%22%3A%221%22%2C%22fromPage%22%3A%22search%22%7D&pdp_npi=6%40dis%21EUR%21177.65%2177.39%21%21%211421.20%21619.12%21%402103894417702343282193991e8b06%2112000052741267042%21sea%21DE%21171554418%21X%211%210%21n_tag%3A-29919%3Bd%3A21e8c569%3Bm03_new_user%3A-29895%3BpisId%3A5000000200524260&curPageLogUid=BbTd2kscUy6C&utparam-url=scene%3Asearch%7Cquery_from%3A%7Cx_object_id%3A1005010537165803%7C_p_origin_prod%3A
 images:
   - lego/10212.jpg
 dateAdded: '2026-02-04'
 dateBought: null
 setId: '10212'
 partCount: 2503
-isRetired: true
 minifigCount: 5
 yearReleased: 2010
+yearRetired: 2012

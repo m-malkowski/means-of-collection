@@ -64,7 +64,7 @@ export interface LegoItem extends BaseItem {
   category: "lego";
   setId: string;
   partCount?: number;
-  isRetired?: boolean;
+  yearRetired?: number;
   minifigCount?: number;
   yearReleased?: number;
 }
@@ -124,7 +124,7 @@ export interface ItemYamlNode {
   // LEGO fields
   setId?: string;
   partCount?: number;
-  isRetired?: boolean;
+  yearRetired?: number;
   minifigCount?: number;
   yearReleased?: number;
 }

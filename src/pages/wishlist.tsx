@@ -174,7 +174,7 @@ export const query = graphql`
         dateBought
         setId
         partCount
-        isRetired
+        yearRetired
         minifigCount
         yearReleased
         images

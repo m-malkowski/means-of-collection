@@ -3,6 +3,7 @@ import { graphql, Link, withPrefix } from "gatsby";
 import type { PageProps } from "gatsby";
 import { Layout, SEO } from "../components";
 import type { ItemYamlNode } from "../types";
+import { isRetired } from "../utils/retired";
 import * as styles from "./item-detail.module.css";
 
 interface ItemDetailPageContext {
@@ -55,7 +56,7 @@ const ItemDetailTemplate: React.FC<PageProps<ItemDetailData, ItemDetailPageConte
                   🎁 {item.status === "owned" ? "GIFT" : "GIFT IDEA"}
                 </span>
               )}
-              {item.isRetired && (
+              {isRetired(item.yearRetired) && (
                 <span className={`${styles.badge} ${styles.badgeRetired}`}>
                   RETIRED
                 </span>
@@ -232,7 +233,7 @@ export const query = graphql`
       dateBought
       setId
       partCount
-      isRetired
+      yearRetired
       minifigCount
       yearReleased
     }

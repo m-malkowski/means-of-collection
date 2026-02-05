@@ -7,7 +7,6 @@ tags:
   - Star Wars
   - Helmet Collection
 retailPrice: 69.99
-storeUrl: https://www.lego.com/en-de/product/princess-leia-boushh-helmet-75351
 images:
   - lego/75351.jpg
 dateAdded: '2026-02-04'
@@ -16,3 +15,5 @@ partCount: 670
 minifigCount: 0
 yearReleased: 2023
 yearRetired: 2024
+links:
+  - url: https://www.lego.com/en-de/product/princess-leia-boushh-helmet-75351

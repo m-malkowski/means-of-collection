@@ -234,6 +234,12 @@
 }
 
 /* External Link */
+.linksContainer {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
 .externalLink {
   display: inline-flex;
   align-items: center;

@@ -68,7 +68,10 @@ tags:
   - large
 retailPrice: 849.99
 purchasePrice: 749.99
-storeUrl: "https://www.lego.com/product/millennium-falcon-75192"
+links:
+  - url: "https://www.lego.com/product/millennium-falcon-75192"
+  - url: "https://www.amazon.com/dp/B07B8WJ6R2"
+    name: "View on Amazon"
 notes: "Bought during May 4th sale. Took 3 weeks to build."
 images:
   - "lego/millennium-falcon-75192-box.jpg"
@@ -99,7 +102,8 @@ tags:
   - display
   - large
 retailPrice: 549.99
-storeUrl: "https://www.lego.com/product/colosseum-10276"
+links:
+  - url: "https://www.lego.com/product/colosseum-10276"
 notes: "Want this for the living room display"
 images:
   - "lego/colosseum-10276.jpg"
@@ -133,7 +137,9 @@ tags:
   - fiction
 retailPrice: 12.99
 purchasePrice: 9.99
-storeUrl: "https://www.amazon.com/dp/0441172717"
+links:
+  - url: "https://www.amazon.com/dp/0441172717"
+  - url: "https://www.goodreads.com/book/show/44767458-dune"
 notes: "First edition paperback"
 images:
   - "books/dune-cover.jpg"

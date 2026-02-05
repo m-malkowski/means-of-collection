@@ -7,7 +7,6 @@ tags:
   - Star Wars
   - Helmet Collection
 retailPrice: 79.99
-storeUrl: https://www.lego.com/en-de/product/at-at-driver-helmet-75429
 images:
   - lego/75429.jpg
 dateAdded: '2026-02-04'
@@ -16,3 +15,5 @@ partCount: 730
 minifigCount: 0
 yearReleased: 2025
 yearRetired: 2026
+links:
+  - url: https://www.lego.com/en-de/product/at-at-driver-helmet-75429

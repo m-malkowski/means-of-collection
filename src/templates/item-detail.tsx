@@ -4,6 +4,7 @@ import type { PageProps } from "gatsby";
 import { Layout, SEO } from "../components";
 import type { ItemYamlNode } from "../types";
 import { isRetired } from "../utils/retired";
+import { formatLinkLabel } from "../utils/links";
 import * as styles from "./item-detail.module.css";
 
 interface ItemDetailPageContext {
@@ -183,17 +184,22 @@ const ItemDetailTemplate: React.FC<PageProps<ItemDetailData, ItemDetailPageConte
                 </section>
               )}
 
-              {item.storeUrl && (
+              {item.links && item.links.length > 0 && (
                 <section className={styles.section}>
                   <h2 className={styles.sectionTitle}>Links</h2>
-                  <a
-                    href={item.storeUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className={styles.externalLink}
-                  >
-                    View on LEGO.com →
-                  </a>
+                  <div className={styles.linksContainer}>
+                    {item.links.map((link, index) => (
+                      <a
+                        key={index}
+                        href={link.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className={styles.externalLink}
+                      >
+                        {formatLinkLabel(link.url, link.name)} →
+                      </a>
+                    ))}
+                  </div>
                 </section>
               )}
             </div>
@@ -226,7 +232,10 @@ export const query = graphql`
       tags
       retailPrice
       purchasePrice
-      storeUrl
+      links {
+        url
+        name
+      }
       notes
       images
       dateAdded

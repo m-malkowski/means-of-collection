@@ -8,7 +8,6 @@ tags:
   - Ultimate Collector Series
 retailPrice: 649.99
 purchasePrice: null
-storeUrl: https://www.lego.com/en-de/product/venator-class-republic-attack-cruiser-75367
 images:
   - lego/75367.jpg
 dateAdded: '2026-02-04'
@@ -18,3 +17,5 @@ partCount: 5374
 minifigCount: 1
 yearReleased: 2023
 yearRetired: 2026
+links:
+  - url: https://www.lego.com/en-de/product/venator-class-republic-attack-cruiser-75367

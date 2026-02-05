@@ -19,7 +19,9 @@ All items share these base fields:
 | `tags` | string[] | ❌ | Freeform tags for filtering |
 | `retailPrice` | number | ❌ | Original retail price in EUR |
 | `purchasePrice` | number | ❌ | Actual purchase price in EUR |
-| `storeUrl` | string | ❌ | Link to store/product page |
+| `links` | array | ❌ | Array of external link objects |
+| `links[].url` | string | ✅ | Link URL |
+| `links[].name` | string | ❌ | Optional custom link name |
 | `notes` | string | ❌ | Personal notes |
 | `images` | string[] | ❌ | Relative paths to images in repo |
 | `dateAdded` | date | ✅ | When added to collection/wishlist |

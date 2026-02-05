@@ -7,7 +7,6 @@ tags:
   - Star Wars
   - Ultimate Collector Series
 retailPrice: 229.99
-storeUrl: https://www.lego.com/en-de/product/tie-interceptor-75382
 images:
   - lego/75382.jpg
 dateAdded: '2026-02-04'
@@ -16,3 +15,5 @@ partCount: 1931
 minifigCount: 2
 yearReleased: 2024
 yearRetired: 2026
+links:
+  - url: https://www.lego.com/en-de/product/tie-interceptor-75382

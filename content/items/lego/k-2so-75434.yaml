@@ -7,7 +7,6 @@ tags:
   - Star Wars
   - Andor
 retailPrice: 89.99
-storeUrl: https://www.lego.com/en-de/product/k-2so-75434
 images:
   - lego/75434.jpg
 dateAdded: '2026-02-04'
@@ -16,3 +15,5 @@ partCount: 845
 minifigCount: 1
 yearReleased: 2025
 yearRetired: 2027
+links:
+  - url: https://www.lego.com/en-de/product/k-2so-75434

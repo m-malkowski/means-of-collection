@@ -7,7 +7,6 @@ tags:
   - Star Wars
 retailPrice: 99.99
 purchasePrice: 69.99
-storeUrl: https://www.lego.com/en-de/product/r2-d2-75379
 notes: First one
 images:
   - lego/75379.webp
@@ -18,3 +17,5 @@ partCount: 1050
 minifigCount: 3
 yearReleased: 2022
 yearRetired: 2027
+links:
+  - url: https://www.lego.com/en-de/product/r2-d2-75379

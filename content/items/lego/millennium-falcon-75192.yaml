@@ -8,7 +8,6 @@ tags:
   - Ultimate Collector Series
 retailPrice: 849.99
 purchasePrice: null
-storeUrl: https://www.lego.com/en-de/product/millennium-falcon-75192
 images:
   - lego/75192.png
 dateAdded: '2026-02-04'
@@ -18,3 +17,5 @@ partCount: 7541
 minifigCount: 1
 yearReleased: 2026
 yearRetired: 2026
+links:
+  - url: https://www.lego.com/en-de/product/millennium-falcon-75192

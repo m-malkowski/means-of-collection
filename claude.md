@@ -124,6 +124,10 @@ isGift: true               # Show as gift idea
 tags: [star-wars, ucs]     # Freeform tags
 retailPrice: 199.99        # EUR
 dateAdded: "2025-01-15"    # ISO date
+links:
+  - url: "https://www.lego.com/product/set-name-12345"
+  - url: "https://www.amazon.com/dp/ABC123"
+    name: "Buy on Amazon"
 
 # LEGO-specific
 setId: "12345"
@@ -221,6 +225,11 @@ type ItemStatus = "owned" | "wishlist";
 type ItemCategory = "lego"; // Extensible for future categories
 type ViewMode = "gallery" | "list";
 
+interface ItemLink {
+  url: string;
+  name?: string; // Optional custom name
+}
+
 interface BaseItem {
   id: string;
   name: string;
@@ -230,7 +239,7 @@ interface BaseItem {
   tags?: string[];
   retailPrice?: number;
   purchasePrice?: number;
-  storeUrl?: string;
+  links?: ItemLink[];
   notes?: string;
   images?: string[];
   dateAdded: string;

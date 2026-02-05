@@ -1473,6 +1473,132 @@ type InternalSortInput = {
   readonly type: InputMaybe<SortOrderEnum>;
 };
 
+type ItemLinkYaml = Node & {
+  readonly children: ReadonlyArray<Node>;
+  readonly id: Scalars['ID'];
+  readonly internal: Internal;
+  readonly name: Maybe<Scalars['String']>;
+  readonly parent: Maybe<Node>;
+  readonly url: Scalars['String'];
+};
+
+type ItemLinkYamlConnection = {
+  readonly distinct: ReadonlyArray<Scalars['String']>;
+  readonly edges: ReadonlyArray<ItemLinkYamlEdge>;
+  readonly group: ReadonlyArray<ItemLinkYamlGroupConnection>;
+  readonly max: Maybe<Scalars['Float']>;
+  readonly min: Maybe<Scalars['Float']>;
+  readonly nodes: ReadonlyArray<ItemLinkYaml>;
+  readonly pageInfo: PageInfo;
+  readonly sum: Maybe<Scalars['Float']>;
+  readonly totalCount: Scalars['Int'];
+};
+
+
+type ItemLinkYamlConnection_distinctArgs = {
+  field: ItemLinkYamlFieldSelector;
+};
+
+
+type ItemLinkYamlConnection_groupArgs = {
+  field: ItemLinkYamlFieldSelector;
+  limit: InputMaybe<Scalars['Int']>;
+  skip: InputMaybe<Scalars['Int']>;
+};
+
+
+type ItemLinkYamlConnection_maxArgs = {
+  field: ItemLinkYamlFieldSelector;
+};
+
+
+type ItemLinkYamlConnection_minArgs = {
+  field: ItemLinkYamlFieldSelector;
+};
+
+
+type ItemLinkYamlConnection_sumArgs = {
+  field: ItemLinkYamlFieldSelector;
+};
+
+type ItemLinkYamlEdge = {
+  readonly next: Maybe<ItemLinkYaml>;
+  readonly node: ItemLinkYaml;
+  readonly previous: Maybe<ItemLinkYaml>;
+};
+
+type ItemLinkYamlFieldSelector = {
+  readonly children: InputMaybe<NodeFieldSelector>;
+  readonly id: InputMaybe<FieldSelectorEnum>;
+  readonly internal: InputMaybe<InternalFieldSelector>;
+  readonly name: InputMaybe<FieldSelectorEnum>;
+  readonly parent: InputMaybe<NodeFieldSelector>;
+  readonly url: InputMaybe<FieldSelectorEnum>;
+};
+
+type ItemLinkYamlFilterInput = {
+  readonly children: InputMaybe<NodeFilterListInput>;
+  readonly id: InputMaybe<StringQueryOperatorInput>;
+  readonly internal: InputMaybe<InternalFilterInput>;
+  readonly name: InputMaybe<StringQueryOperatorInput>;
+  readonly parent: InputMaybe<NodeFilterInput>;
+  readonly url: InputMaybe<StringQueryOperatorInput>;
+};
+
+type ItemLinkYamlFilterListInput = {
+  readonly elemMatch: InputMaybe<ItemLinkYamlFilterInput>;
+};
+
+type ItemLinkYamlGroupConnection = {
+  readonly distinct: ReadonlyArray<Scalars['String']>;
+  readonly edges: ReadonlyArray<ItemLinkYamlEdge>;
+  readonly field: Scalars['String'];
+  readonly fieldValue: Maybe<Scalars['String']>;
+  readonly group: ReadonlyArray<ItemLinkYamlGroupConnection>;
+  readonly max: Maybe<Scalars['Float']>;
+  readonly min: Maybe<Scalars['Float']>;
+  readonly nodes: ReadonlyArray<ItemLinkYaml>;
+  readonly pageInfo: PageInfo;
+  readonly sum: Maybe<Scalars['Float']>;
+  readonly totalCount: Scalars['Int'];
+};
+
+
+type ItemLinkYamlGroupConnection_distinctArgs = {
+  field: ItemLinkYamlFieldSelector;
+};
+
+
+type ItemLinkYamlGroupConnection_groupArgs = {
+  field: ItemLinkYamlFieldSelector;
+  limit: InputMaybe<Scalars['Int']>;
+  skip: InputMaybe<Scalars['Int']>;
+};
+
+
+type ItemLinkYamlGroupConnection_maxArgs = {
+  field: ItemLinkYamlFieldSelector;
+};
+
+
+type ItemLinkYamlGroupConnection_minArgs = {
+  field: ItemLinkYamlFieldSelector;
+};
+
+
+type ItemLinkYamlGroupConnection_sumArgs = {
+  field: ItemLinkYamlFieldSelector;
+};
+
+type ItemLinkYamlSortInput = {
+  readonly children: InputMaybe<NodeSortInput>;
+  readonly id: InputMaybe<SortOrderEnum>;
+  readonly internal: InputMaybe<InternalSortInput>;
+  readonly name: InputMaybe<SortOrderEnum>;
+  readonly parent: InputMaybe<NodeSortInput>;
+  readonly url: InputMaybe<SortOrderEnum>;
+};
+
 type JPGOptions = {
   readonly progressive: InputMaybe<Scalars['Boolean']>;
   readonly quality: InputMaybe<Scalars['Int']>;
@@ -1497,6 +1623,7 @@ type LegoYaml = Node & {
   readonly internal: Internal;
   readonly isGift: Scalars['Boolean'];
   readonly isRetired: Maybe<Scalars['Boolean']>;
+  readonly links: Maybe<ReadonlyArray<Maybe<ItemLinkYaml>>>;
   readonly minifigCount: Maybe<Scalars['Int']>;
   readonly name: Scalars['String'];
   readonly notes: Maybe<Scalars['String']>;
@@ -1506,7 +1633,6 @@ type LegoYaml = Node & {
   readonly retailPrice: Maybe<Scalars['Float']>;
   readonly setId: Maybe<Scalars['String']>;
   readonly status: Scalars['String'];
-  readonly storeUrl: Maybe<Scalars['String']>;
   readonly tags: Maybe<ReadonlyArray<Maybe<Scalars['String']>>>;
   readonly yamlId: Maybe<Scalars['String']>;
   readonly yearReleased: Maybe<Scalars['Int']>;
@@ -1568,6 +1694,7 @@ type LegoYamlFieldSelector = {
   readonly internal: InputMaybe<InternalFieldSelector>;
   readonly isGift: InputMaybe<FieldSelectorEnum>;
   readonly isRetired: InputMaybe<FieldSelectorEnum>;
+  readonly links: InputMaybe<ItemLinkYamlFieldSelector>;
   readonly minifigCount: InputMaybe<FieldSelectorEnum>;
   readonly name: InputMaybe<FieldSelectorEnum>;
   readonly notes: InputMaybe<FieldSelectorEnum>;
@@ -1577,7 +1704,6 @@ type LegoYamlFieldSelector = {
   readonly retailPrice: InputMaybe<FieldSelectorEnum>;
   readonly setId: InputMaybe<FieldSelectorEnum>;
   readonly status: InputMaybe<FieldSelectorEnum>;
-  readonly storeUrl: InputMaybe<FieldSelectorEnum>;
   readonly tags: InputMaybe<FieldSelectorEnum>;
   readonly yamlId: InputMaybe<FieldSelectorEnum>;
   readonly yearReleased: InputMaybe<FieldSelectorEnum>;
@@ -1594,6 +1720,7 @@ type LegoYamlFilterInput = {
   readonly internal: InputMaybe<InternalFilterInput>;
   readonly isGift: InputMaybe<BooleanQueryOperatorInput>;
   readonly isRetired: InputMaybe<BooleanQueryOperatorInput>;
+  readonly links: InputMaybe<ItemLinkYamlFilterListInput>;
   readonly minifigCount: InputMaybe<IntQueryOperatorInput>;
   readonly name: InputMaybe<StringQueryOperatorInput>;
   readonly notes: InputMaybe<StringQueryOperatorInput>;
@@ -1603,7 +1730,6 @@ type LegoYamlFilterInput = {
   readonly retailPrice: InputMaybe<FloatQueryOperatorInput>;
   readonly setId: InputMaybe<StringQueryOperatorInput>;
   readonly status: InputMaybe<StringQueryOperatorInput>;
-  readonly storeUrl: InputMaybe<StringQueryOperatorInput>;
   readonly tags: InputMaybe<StringQueryOperatorInput>;
   readonly yamlId: InputMaybe<StringQueryOperatorInput>;
   readonly yearReleased: InputMaybe<IntQueryOperatorInput>;
@@ -1665,6 +1791,7 @@ type LegoYamlSortInput = {
   readonly internal: InputMaybe<InternalSortInput>;
   readonly isGift: InputMaybe<SortOrderEnum>;
   readonly isRetired: InputMaybe<SortOrderEnum>;
+  readonly links: InputMaybe<ItemLinkYamlSortInput>;
   readonly minifigCount: InputMaybe<SortOrderEnum>;
   readonly name: InputMaybe<SortOrderEnum>;
   readonly notes: InputMaybe<SortOrderEnum>;
@@ -1674,7 +1801,6 @@ type LegoYamlSortInput = {
   readonly retailPrice: InputMaybe<SortOrderEnum>;
   readonly setId: InputMaybe<SortOrderEnum>;
   readonly status: InputMaybe<SortOrderEnum>;
-  readonly storeUrl: InputMaybe<SortOrderEnum>;
   readonly tags: InputMaybe<SortOrderEnum>;
   readonly yamlId: InputMaybe<SortOrderEnum>;
   readonly yearReleased: InputMaybe<SortOrderEnum>;
@@ -1754,6 +1880,7 @@ type Query = {
   readonly allDirectory: DirectoryConnection;
   readonly allFile: FileConnection;
   readonly allImageSharp: ImageSharpConnection;
+  readonly allItemLinkYaml: ItemLinkYamlConnection;
   readonly allLegoYaml: LegoYamlConnection;
   readonly allSite: SiteConnection;
   readonly allSiteBuildMetadata: SiteBuildMetadataConnection;
@@ -1764,6 +1891,7 @@ type Query = {
   readonly directory: Maybe<Directory>;
   readonly file: Maybe<File>;
   readonly imageSharp: Maybe<ImageSharp>;
+  readonly itemLinkYaml: Maybe<ItemLinkYaml>;
   readonly legoYaml: Maybe<LegoYaml>;
   readonly site: Maybe<Site>;
   readonly siteBuildMetadata: Maybe<SiteBuildMetadata>;
@@ -1802,6 +1930,14 @@ type Query_allImageSharpArgs = {
   limit: InputMaybe<Scalars['Int']>;
   skip: InputMaybe<Scalars['Int']>;
   sort: InputMaybe<ReadonlyArray<InputMaybe<ImageSharpSortInput>>>;
+};
+
+
+type Query_allItemLinkYamlArgs = {
+  filter: InputMaybe<ItemLinkYamlFilterInput>;
+  limit: InputMaybe<Scalars['Int']>;
+  skip: InputMaybe<Scalars['Int']>;
+  sort: InputMaybe<ReadonlyArray<InputMaybe<ItemLinkYamlSortInput>>>;
 };
 
 
@@ -1964,6 +2100,16 @@ type Query_imageSharpArgs = {
 };
 
 
+type Query_itemLinkYamlArgs = {
+  children: InputMaybe<NodeFilterListInput>;
+  id: InputMaybe<StringQueryOperatorInput>;
+  internal: InputMaybe<InternalFilterInput>;
+  name: InputMaybe<StringQueryOperatorInput>;
+  parent: InputMaybe<NodeFilterInput>;
+  url: InputMaybe<StringQueryOperatorInput>;
+};
+
+
 type Query_legoYamlArgs = {
   category: InputMaybe<StringQueryOperatorInput>;
   children: InputMaybe<NodeFilterListInput>;
@@ -1974,6 +2120,7 @@ type Query_legoYamlArgs = {
   internal: InputMaybe<InternalFilterInput>;
   isGift: InputMaybe<BooleanQueryOperatorInput>;
   isRetired: InputMaybe<BooleanQueryOperatorInput>;
+  links: InputMaybe<ItemLinkYamlFilterListInput>;
   minifigCount: InputMaybe<IntQueryOperatorInput>;
   name: InputMaybe<StringQueryOperatorInput>;
   notes: InputMaybe<StringQueryOperatorInput>;
@@ -1983,7 +2130,6 @@ type Query_legoYamlArgs = {
   retailPrice: InputMaybe<FloatQueryOperatorInput>;
   setId: InputMaybe<StringQueryOperatorInput>;
   status: InputMaybe<StringQueryOperatorInput>;
-  storeUrl: InputMaybe<StringQueryOperatorInput>;
   tags: InputMaybe<StringQueryOperatorInput>;
   yamlId: InputMaybe<StringQueryOperatorInput>;
   yearReleased: InputMaybe<IntQueryOperatorInput>;
@@ -2862,7 +3008,7 @@ type WebPOptions = {
 type CollectionPageQueryQueryVariables = Exact<{ [key: string]: never; }>;
 
 
-type CollectionPageQueryQuery = { readonly allLegoYaml: { readonly nodes: ReadonlyArray<{ readonly id: string, readonly name: string, readonly category: string, readonly status: string, readonly isGift: boolean, readonly tags: ReadonlyArray<string | null> | null, readonly retailPrice: number | null, readonly purchasePrice: number | null, readonly storeUrl: string | null, readonly notes: string | null, readonly dateAdded: string, readonly dateBought: string | null, readonly setId: string | null, readonly partCount: number | null, readonly yearRetired: number | null, readonly minifigCount: number | null, readonly yearReleased: number | null, readonly images: ReadonlyArray<string | null> | null }> } };
+type CollectionPageQueryQuery = { readonly allLegoYaml: { readonly nodes: ReadonlyArray<{ readonly id: string, readonly name: string, readonly category: string, readonly status: string, readonly isGift: boolean, readonly tags: ReadonlyArray<string | null> | null, readonly retailPrice: number | null, readonly purchasePrice: number | null, readonly notes: string | null, readonly dateAdded: string, readonly dateBought: string | null, readonly setId: string | null, readonly partCount: number | null, readonly yearRetired: number | null, readonly minifigCount: number | null, readonly yearReleased: number | null, readonly images: ReadonlyArray<string | null> | null, readonly links: ReadonlyArray<{ readonly url: string, readonly name: string | null } | null> | null }> } };
 
 type GatsbyImageSharpFixedFragment = { readonly base64: string | null, readonly width: number, readonly height: number, readonly src: string, readonly srcSet: string };
 
@@ -2900,7 +3046,7 @@ type ItemDetailQueryQueryVariables = Exact<{
 }>;
 
 
-type ItemDetailQueryQuery = { readonly legoYaml: { readonly id: string, readonly name: string, readonly category: string, readonly status: string, readonly isGift: boolean, readonly tags: ReadonlyArray<string | null> | null, readonly retailPrice: number | null, readonly purchasePrice: number | null, readonly storeUrl: string | null, readonly notes: string | null, readonly images: ReadonlyArray<string | null> | null, readonly dateAdded: string, readonly dateBought: string | null, readonly setId: string | null, readonly partCount: number | null, readonly yearRetired: number | null, readonly minifigCount: number | null, readonly yearReleased: number | null } | null };
+type ItemDetailQueryQuery = { readonly legoYaml: { readonly id: string, readonly name: string, readonly category: string, readonly status: string, readonly isGift: boolean, readonly tags: ReadonlyArray<string | null> | null, readonly retailPrice: number | null, readonly purchasePrice: number | null, readonly notes: string | null, readonly images: ReadonlyArray<string | null> | null, readonly dateAdded: string, readonly dateBought: string | null, readonly setId: string | null, readonly partCount: number | null, readonly yearRetired: number | null, readonly minifigCount: number | null, readonly yearReleased: number | null, readonly links: ReadonlyArray<{ readonly url: string, readonly name: string | null } | null> | null } | null };
 
 type SEOQueryQueryVariables = Exact<{ [key: string]: never; }>;
 
@@ -2910,7 +3056,7 @@ type SEOQueryQuery = { readonly site: { readonly siteMetadata: { readonly title:
 type WishlistPageQueryQueryVariables = Exact<{ [key: string]: never; }>;
 
 
-type WishlistPageQueryQuery = { readonly allLegoYaml: { readonly nodes: ReadonlyArray<{ readonly id: string, readonly name: string, readonly category: string, readonly status: string, readonly isGift: boolean, readonly tags: ReadonlyArray<string | null> | null, readonly retailPrice: number | null, readonly purchasePrice: number | null, readonly storeUrl: string | null, readonly notes: string | null, readonly dateAdded: string, readonly dateBought: string | null, readonly setId: string | null, readonly partCount: number | null, readonly yearRetired: number | null, readonly minifigCount: number | null, readonly yearReleased: number | null, readonly images: ReadonlyArray<string | null> | null }> } };
+type WishlistPageQueryQuery = { readonly allLegoYaml: { readonly nodes: ReadonlyArray<{ readonly id: string, readonly name: string, readonly category: string, readonly status: string, readonly isGift: boolean, readonly tags: ReadonlyArray<string | null> | null, readonly retailPrice: number | null, readonly purchasePrice: number | null, readonly notes: string | null, readonly dateAdded: string, readonly dateBought: string | null, readonly setId: string | null, readonly partCount: number | null, readonly yearRetired: number | null, readonly minifigCount: number | null, readonly yearReleased: number | null, readonly images: ReadonlyArray<string | null> | null, readonly links: ReadonlyArray<{ readonly url: string, readonly name: string | null } | null> | null }> } };
 
 type AllItemsForPagesQueryVariables = Exact<{ [key: string]: never; }>;
 

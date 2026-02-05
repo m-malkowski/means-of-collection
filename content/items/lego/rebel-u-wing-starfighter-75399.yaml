@@ -7,7 +7,6 @@ tags:
   - Star Wars
   - Andor
 retailPrice: 69.99
-storeUrl: https://www.lego.com/en-de/product/rebel-u-wing-starfighter-75399
 images:
   - lego/75399.jpg
 dateAdded: '2026-02-04'
@@ -16,3 +15,5 @@ partCount: 594
 minifigCount: 4
 yearReleased: 2025
 yearRetired: 2026
+links:
+  - url: https://www.lego.com/en-de/product/rebel-u-wing-starfighter-75399

@@ -69,6 +69,11 @@ export const createSchemaCustomization: GatsbyNode["createSchemaCustomization"] 
 
   // Define explicit types for LEGO items to ensure nullability is correct
   createTypes(`
+    type ItemLinkYaml implements Node {
+      url: String!
+      name: String
+    }
+
     type LegoYaml implements Node {
       id: ID!
       name: String!
@@ -78,7 +83,7 @@ export const createSchemaCustomization: GatsbyNode["createSchemaCustomization"] 
       tags: [String]
       retailPrice: Float
       purchasePrice: Float
-      storeUrl: String
+      links: [ItemLinkYaml]
       notes: String
       images: [String]
       dateAdded: String!

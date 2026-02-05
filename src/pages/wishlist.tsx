@@ -168,7 +168,10 @@ export const query = graphql`
         tags
         retailPrice
         purchasePrice
-        storeUrl
+        links {
+          url
+          name
+        }
         notes
         dateAdded
         dateBought

@@ -7,7 +7,6 @@ tags:
   - Star Wars
 retailPrice: 139.99
 purchasePrice: null
-storeUrl: https://www.lego.com/en-de/product/c-3po-75398
 images:
   - lego/75398.png
 dateAdded: '2026-02-04'
@@ -17,3 +16,5 @@ partCount: 1138
 minifigCount: 1
 yearReleased: 2022
 yearRetired: 2027
+links:
+  - url: https://www.lego.com/en-de/product/c-3po-75398

@@ -42,6 +42,12 @@ export type ItemStatus = "owned" | "wishlist";
 
 export type ItemCategory = "lego"; // Add more as needed: | "books" | "games"
 
+// Link type for external store links
+export interface ItemLink {
+  url: string;
+  name?: string; // Optional custom name for the link
+}
+
 // Common fields shared by all items
 export interface BaseItem {
   id: string;
@@ -52,7 +58,7 @@ export interface BaseItem {
   tags?: string[];
   retailPrice?: number;
   purchasePrice?: number;
-  storeUrl?: string;
+  links?: ItemLink[]; // Multiple external links
   notes?: string;
   images?: string[];
   dateAdded: string; // ISO date string
@@ -107,6 +113,11 @@ export type ViewMode = "gallery" | "list";
 // GraphQL Query Result Types
 // ============================================
 
+export interface ItemLinkYaml {
+  url: string;
+  name?: string;
+}
+
 export interface ItemYamlNode {
   id: string;
   name: string;
@@ -116,7 +127,7 @@ export interface ItemYamlNode {
   tags?: string[];
   retailPrice?: number;
   purchasePrice?: number;
-  storeUrl?: string;
+  links?: ItemLinkYaml[];
   notes?: string;
   images?: string[];
   dateAdded: string;

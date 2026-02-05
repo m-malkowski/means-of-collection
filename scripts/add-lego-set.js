@@ -49,7 +49,11 @@ fs.createReadStream(csvPath)
       tags: [found.Theme, found.Subtheme].filter(Boolean),
       retailPrice: parseFloat(found.DERetailPrice) || 0,
       purchasePrice: '',
-      storeUrl: `https://www.lego.com/en-de/product/${slugifiedName}-${found.Number}`,
+      links: [
+        {
+          url: `https://www.lego.com/en-de/product/${slugifiedName}-${found.Number}`,
+        },
+      ],
       notes: '',
       images: [`lego/${found.Number}.jpg`],
       dateAdded: new Date().toISOString().split('T')[0],

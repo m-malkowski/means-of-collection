@@ -8,7 +8,6 @@ tags:
   - Icons
 retailPrice: 59.99
 purchasePrice: 49.99
-storeUrl: https://www.lego.com/en-de/product/wildflower-bouquet-10313
 notes: Bday gift
 images:
   - lego/10313.webp
@@ -19,3 +18,5 @@ partCount: 939
 isRetired: false
 minifigCount: 0
 yearReleased: 2023
+links:
+  - url: https://www.lego.com/en-de/product/wildflower-bouquet-10313

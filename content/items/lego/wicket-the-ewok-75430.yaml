@@ -6,7 +6,6 @@ isGift: false
 tags:
   - Star Wars
   - Episode VI
-retailPrice: 119.99
 images:
   - lego/75430.jpg
 dateAdded: '2026-02-04'
@@ -17,3 +16,5 @@ yearReleased: 2025
 yearRetired: 2026
 links:
   - url: https://www.lego.com/en-de/product/wicket-the-ewok-75430
+referenceRetailPrice: 119.99
+genuinePrice: 100.99

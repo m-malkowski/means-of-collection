@@ -35,6 +35,13 @@
   margin-bottom: 0;
 }
 
+.legend {
+  margin-top: var(--space-2);
+  color: var(--color-text-muted);
+  font-size: var(--text-xs);
+  margin-bottom: 0;
+}
+
 .actions {
   display: flex;
   align-items: center;

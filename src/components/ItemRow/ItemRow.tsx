@@ -10,7 +10,9 @@ interface ItemRowProps {
 }
 
 const ItemRow: React.FC<ItemRowProps> = ({ item, currencySymbol = "€" }) => {
-  const price = item.purchasePrice || item.retailPrice;
+  const price = item.genuinePrice || item.referenceRetailPrice;
+  const showReferencePrice = item.referenceRetailPrice &&
+    item.referenceRetailPrice !== price;
   const itemUrl = `/item/${item.id}/`;
 
   return (
@@ -48,10 +50,18 @@ const ItemRow: React.FC<ItemRowProps> = ({ item, currencySymbol = "€" }) => {
 
         <div className={styles.priceCol}>
           {price && (
-            <span className={styles.price}>
-              {currencySymbol}
-              {price.toFixed(2)}
-            </span>
+            <>
+              <span className={styles.price}>
+                {currencySymbol}
+                {price.toFixed(2)}
+              </span>
+              {showReferencePrice && (
+                <span className={styles.referencePrice}>
+                  {currencySymbol}
+                  {item.referenceRetailPrice!.toFixed(2)}*
+                </span>
+              )}
+            </>
           )}
         </div>
       </Link>

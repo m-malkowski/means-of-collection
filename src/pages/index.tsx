@@ -18,11 +18,11 @@ const IndexPage: React.FC<PageProps<HomePageData>> = ({ data }) => {
 
   // Calculate statistics
   const collectionValue = ownedItems.reduce(
-    (sum, item) => sum + (item.purchasePrice || item.retailPrice || 0),
+    (sum, item) => sum + (item.genuinePrice || item.referenceRetailPrice || 0),
     0
   );
   const wishlistValue = wishlistItems.reduce(
-    (sum, item) => sum + (item.retailPrice || 0),
+    (sum, item) => sum + (item.genuinePrice || item.referenceRetailPrice || 0),
     0
   );
 
@@ -91,9 +91,9 @@ const IndexPage: React.FC<PageProps<HomePageData>> = ({ data }) => {
                 <span className={styles.recentStatus}>
                   [{item.status === "owned" ? "owned" : "wishlist"}]
                 </span>
-                {item.retailPrice && (
+                {item.genuinePrice && (
                   <span className={styles.recentPrice}>
-                    €{item.retailPrice.toFixed(2)}
+                    €{item.genuinePrice.toFixed(2)}
                   </span>
                 )}
               </Link>
@@ -134,7 +134,8 @@ export const query = graphql`
         status
         isGift
         tags
-        retailPrice
+        referenceRetailPrice
+        genuinePrice
         purchasePrice
         dateAdded
         setId

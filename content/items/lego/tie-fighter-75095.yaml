@@ -6,7 +6,6 @@ isGift: false
 tags:
   - Star Wars
   - Ultimate Collector Series
-retailPrice: 199.99
 images:
   - lego/75095.jpg
 dateAdded: '2026-02-04'
@@ -17,3 +16,5 @@ yearReleased: 2015
 yearRetired: 2017
 links:
   - url: https://www.lego.com/en-de/product/tie-fighter-75095
+referenceRetailPrice: 229
+genuinePrice: 75

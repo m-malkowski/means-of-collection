@@ -6,7 +6,6 @@ isGift: false
 tags:
   - Star Wars
   - Ultimate Collector Series
-retailPrice: 849.99
 purchasePrice: null
 images:
   - lego/75192.png
@@ -19,3 +18,5 @@ yearReleased: 2026
 yearRetired: 2026
 links:
   - url: https://www.lego.com/en-de/product/millennium-falcon-75192
+referenceRetailPrice: 849.99
+genuinePrice: 149.99

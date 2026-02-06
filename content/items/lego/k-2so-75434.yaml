@@ -6,7 +6,6 @@ isGift: false
 tags:
   - Star Wars
   - Andor
-retailPrice: 89.99
 images:
   - lego/75434.jpg
 dateAdded: '2026-02-04'
@@ -17,3 +16,5 @@ yearReleased: 2025
 yearRetired: 2027
 links:
   - url: https://www.lego.com/en-de/product/k-2so-75434
+referenceRetailPrice: 89.99
+genuinePrice: 62.99

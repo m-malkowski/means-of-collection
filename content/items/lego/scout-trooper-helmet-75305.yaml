@@ -6,7 +6,6 @@ isGift: false
 tags:
   - Star Wars
   - Helmet Collection
-retailPrice: 49.99
 images:
   - lego/75305.jpg
 dateAdded: '2026-02-04'
@@ -17,3 +16,5 @@ yearReleased: 2021
 yearRetired: 2022
 links:
   - url: https://www.lego.com/en-de/product/scout-trooper-helmet-75305
+referenceRetailPrice: 49.99
+genuinePrice: 29.99

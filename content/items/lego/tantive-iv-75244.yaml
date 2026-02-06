@@ -6,7 +6,6 @@ isGift: false
 tags:
   - Star Wars
   - Miscellaneous
-retailPrice: 194.95
 images:
   - lego/75244.jpg
 dateAdded: '2026-02-04'
@@ -17,3 +16,5 @@ yearReleased: 2019
 yearRetired: 2020
 links:
   - url: https://www.lego.com/en-de/product/tantive-iv-75244
+referenceRetailPrice: 194.95
+genuinePrice: 55

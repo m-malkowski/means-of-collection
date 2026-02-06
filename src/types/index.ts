@@ -56,7 +56,8 @@ export interface BaseItem {
   status: ItemStatus;
   isGift: boolean;
   tags?: string[];
-  retailPrice?: number;
+  referenceRetailPrice?: number;
+  genuinePrice?: number;
   purchasePrice?: number;
   links?: ItemLink[]; // Multiple external links
   notes?: string;
@@ -125,7 +126,8 @@ export interface ItemYamlNode {
   status: string;
   isGift: boolean;
   tags?: string[];
-  retailPrice?: number;
+  referenceRetailPrice?: number;
+  genuinePrice?: number;
   purchasePrice?: number;
   links?: ItemLinkYaml[];
   notes?: string;

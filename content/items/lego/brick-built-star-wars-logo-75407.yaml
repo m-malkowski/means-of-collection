@@ -2,11 +2,10 @@ id: lego-brick-built-star-wars-logo-75407
 name: Brick-Built Star Wars Logo
 category: lego
 status: wishlist
-isGift: false
+isGift: true
 tags:
   - Star Wars
   - Miscellaneous
-retailPrice: 69.99
 images:
   - lego/75407.jpg
 dateAdded: '2026-02-04'
@@ -17,3 +16,5 @@ yearReleased: 2025
 yearRetired: 2027
 links:
   - url: https://www.lego.com/en-de/product/brick-built-star-wars-logo-75407
+referenceRetailPrice: 69.99
+genuinePrice: 48.99

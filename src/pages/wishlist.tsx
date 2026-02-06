@@ -23,9 +23,9 @@ function sortItems(items: ItemYamlNode[], sortOption: SortOption): ItemYamlNode[
       case "name-desc":
         return b.name.localeCompare(a.name);
       case "price-asc":
-        return (a.retailPrice || 0) - (b.retailPrice || 0);
+        return (a.genuinePrice || a.referenceRetailPrice || 0) - (b.genuinePrice || b.referenceRetailPrice || 0);
       case "price-desc":
-        return (b.retailPrice || 0) - (a.retailPrice || 0);
+        return (b.genuinePrice || b.referenceRetailPrice || 0) - (a.genuinePrice || a.referenceRetailPrice || 0);
       case "date-asc":
         return new Date(a.dateAdded).getTime() - new Date(b.dateAdded).getTime();
       case "date-desc":
@@ -83,7 +83,7 @@ const WishlistPage: React.FC<PageProps<WishlistPageData>> = ({ data }) => {
 
   // Calculate total value of filtered wishlist
   const totalValue = sortedItems.reduce(
-    (sum, item) => sum + (item.retailPrice || 0),
+    (sum, item) => sum + (item.genuinePrice || item.referenceRetailPrice || 0),
     0
   );
 
@@ -93,11 +93,11 @@ const WishlistPage: React.FC<PageProps<WishlistPageData>> = ({ data }) => {
     owned: ownedItems.length,
     wishlist: wishlistItems.length,
     collectionValue: ownedItems.reduce(
-      (sum, item) => sum + (item.purchasePrice || item.retailPrice || 0),
+      (sum, item) => sum + (item.genuinePrice || item.referenceRetailPrice || 0),
       0
     ),
     wishlistValue: wishlistItems.reduce(
-      (sum, item) => sum + (item.retailPrice || 0),
+      (sum, item) => sum + (item.genuinePrice || item.referenceRetailPrice || 0),
       0
     ),
   };
@@ -107,6 +107,7 @@ const WishlistPage: React.FC<PageProps<WishlistPageData>> = ({ data }) => {
       <PageHeader
         title="Wishlist"
         subtitle={`${sortedItems.length} items | Total: €${totalValue.toFixed(2)}`}
+        showPriceLegend={true}
       >
         <FilterToolbar
           showFilters={showFilters}
@@ -166,7 +167,8 @@ export const query = graphql`
         status
         isGift
         tags
-        retailPrice
+        referenceRetailPrice
+        genuinePrice
         purchasePrice
         links {
           url

@@ -10,13 +10,15 @@ interface ItemCardProps {
 }
 
 const ItemCard: React.FC<ItemCardProps> = ({ item, currencySymbol = "€" }) => {
-  const price = item.purchasePrice || item.retailPrice;
+  const price = item.genuinePrice || item.referenceRetailPrice;
+  const showReferencePrice = item.referenceRetailPrice &&
+    item.referenceRetailPrice !== price;
   const showSavings =
     item.purchasePrice &&
-    item.retailPrice &&
-    item.purchasePrice < item.retailPrice;
+    price &&
+    item.purchasePrice < price;
   const savings = showSavings
-    ? item.retailPrice! - item.purchasePrice!
+    ? price! - item.purchasePrice!
     : 0;
 
   const itemUrl = `/item/${item.id}/`;
@@ -59,6 +61,12 @@ const ItemCard: React.FC<ItemCardProps> = ({ item, currencySymbol = "€" }) => 
                 <span className={styles.price}>
                   {currencySymbol}
                   {price.toFixed(2)}
+                </span>
+              )}
+              {showReferencePrice && (
+                <span className={styles.referencePrice}>
+                  {currencySymbol}
+                  {item.referenceRetailPrice!.toFixed(2)}*
                 </span>
               )}
               {showSavings && (

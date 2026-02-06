@@ -131,6 +131,12 @@
   color: var(--color-accent);
 }
 
+.referencePrice {
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+  margin-left: var(--space-1);
+}
+
 .savings {
   font-size: var(--text-xs);
   color: var(--color-success);

@@ -6,7 +6,6 @@ isGift: false
 tags:
   - Star Wars
   - Helmet Collection
-retailPrice: 79.99
 images:
   - lego/75408.jpg
 dateAdded: '2026-02-04'
@@ -17,3 +16,5 @@ yearReleased: 2025
 yearRetired: 2027
 links:
   - url: https://www.lego.com/en-de/product/jango-fett-helmet-75408
+referenceRetailPrice: 79.99
+genuinePrice: 29.99

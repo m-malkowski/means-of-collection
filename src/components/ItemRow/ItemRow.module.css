@@ -123,6 +123,9 @@
 }
 
 .priceCol {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
   text-align: right;
 }
 
@@ -143,4 +146,9 @@
 .price {
   font-weight: 600;
   color: var(--color-accent);
+}
+
+.referencePrice {
+  font-size: var(--text-xs);
+  color: var(--color-text-muted);
 }

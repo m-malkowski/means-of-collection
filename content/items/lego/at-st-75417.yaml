@@ -2,11 +2,10 @@ id: lego-at-st-75417
 name: AT-ST
 category: lego
 status: wishlist
-isGift: false
+isGift: true
 tags:
   - Star Wars
   - Ultimate Collector Series
-retailPrice: 199.99
 images:
   - lego/75417.jpg
 dateAdded: '2026-02-04'
@@ -17,3 +16,6 @@ yearReleased: 2025
 yearRetired: 2027
 links:
   - url: https://www.lego.com/en-de/product/at-st-75417
+  - url: https://www.amazon.de/dp/B0DWDTK29J?m=A3JWKAKR8XB7XF&tag=idealode-am-pk-21&ascsubtag=2026-02-06_f332de29da6c75789a0cb6a7e2591a120518be3987e7b28dd7ac460892e5828b&th=1&psc=1
+referenceRetailPrice: 199.99
+genuinePrice: 144.99

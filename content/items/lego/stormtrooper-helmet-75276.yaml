@@ -6,7 +6,6 @@ isGift: false
 tags:
   - Star Wars
   - Helmet Collection
-retailPrice: 59.99
 images:
   - lego/75276.jpg
 dateAdded: '2026-02-04'
@@ -17,3 +16,5 @@ yearReleased: 2020
 yearRetired: 2021
 links:
   - url: https://www.lego.com/en-de/product/stormtrooper-helmet-75276
+referenceRetailPrice: 59.99
+genuinePrice: 29.99

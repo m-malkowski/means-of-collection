@@ -114,7 +114,7 @@ function matchesPriceRange(
 ): boolean {
   if (!range) return true;
 
-  const price = item.retailPrice ?? 0;
+  const price = item.genuinePrice ?? item.referenceRetailPrice ?? 0;
   const { min, max } = parsePriceRange(range, breakpoints);
 
   if (min !== null && price < min) return false;

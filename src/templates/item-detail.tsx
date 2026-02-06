@@ -19,10 +19,10 @@ const ItemDetailTemplate: React.FC<PageProps<ItemDetailData, ItemDetailPageConte
   data,
 }) => {
   const item = data.legoYaml;
-  const price = item.purchasePrice || item.retailPrice;
+  const price = item.genuinePrice || item.referenceRetailPrice;
   const showSavings =
-    item.purchasePrice && item.retailPrice && item.purchasePrice < item.retailPrice;
-  const savings = showSavings ? item.retailPrice! - item.purchasePrice! : 0;
+    item.purchasePrice && price && item.purchasePrice < price;
+  const savings = showSavings ? price! - item.purchasePrice! : 0;
 
   // Format date for display
   const formatDate = (dateStr?: string) => {
@@ -96,10 +96,20 @@ const ItemDetailTemplate: React.FC<PageProps<ItemDetailData, ItemDetailPageConte
               <section className={styles.section}>
                 <h2 className={styles.sectionTitle}>Pricing</h2>
                 <dl className={styles.detailList}>
-                  {item.retailPrice && (
+                  {(item.genuinePrice || item.referenceRetailPrice) && (
                     <>
-                      <dt>Retail Price</dt>
-                      <dd>€{item.retailPrice.toFixed(2)}</dd>
+                      <dt>Price</dt>
+                      <dd className={styles.priceHighlight}>
+                        €{(item.genuinePrice || item.referenceRetailPrice || 0).toFixed(2)}
+                      </dd>
+                    </>
+                  )}
+                  {item.referenceRetailPrice && item.referenceRetailPrice !== item.genuinePrice && (
+                    <>
+                      <dt className={styles.mutedLabel}>Reference Retail Price *</dt>
+                      <dd className={styles.mutedText}>
+                        €{item.referenceRetailPrice.toFixed(2)}
+                      </dd>
                     </>
                   )}
                   {item.purchasePrice && (
@@ -107,21 +117,26 @@ const ItemDetailTemplate: React.FC<PageProps<ItemDetailData, ItemDetailPageConte
                       <dt>Purchase Price</dt>
                       <dd className={styles.priceHighlight}>
                         €{item.purchasePrice.toFixed(2)}
-                        {showSavings && (
+                        {item.genuinePrice && item.purchasePrice < item.genuinePrice && (
                           <span className={styles.savings}>
-                            (saved €{savings.toFixed(2)})
+                            (saved €{(item.genuinePrice - item.purchasePrice).toFixed(2)})
                           </span>
                         )}
                       </dd>
                     </>
                   )}
-                  {!item.purchasePrice && !item.retailPrice && (
+                  {!item.genuinePrice && !item.referenceRetailPrice && !item.purchasePrice && (
                     <>
                       <dt>Price</dt>
                       <dd>Not available</dd>
                     </>
                   )}
                 </dl>
+                {item.referenceRetailPrice && item.referenceRetailPrice !== item.genuinePrice && (
+                  <p className={styles.footnote}>
+                    * Reference retail price is the official LEGO MSRP at launch
+                  </p>
+                )}
               </section>
 
               <section className={styles.section}>
@@ -230,7 +245,8 @@ export const query = graphql`
       status
       isGift
       tags
-      retailPrice
+      referenceRetailPrice
+      genuinePrice
       purchasePrice
       links {
         url

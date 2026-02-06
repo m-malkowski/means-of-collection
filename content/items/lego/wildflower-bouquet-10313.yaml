@@ -6,7 +6,6 @@ isGift: false
 tags:
   - Botanical Collection
   - Icons
-retailPrice: 59.99
 purchasePrice: 49.99
 notes: Bday gift
 images:
@@ -20,3 +19,5 @@ minifigCount: 0
 yearReleased: 2023
 links:
   - url: https://www.lego.com/en-de/product/wildflower-bouquet-10313
+referenceRetailPrice: 59.99
+genuinePrice: 59.99

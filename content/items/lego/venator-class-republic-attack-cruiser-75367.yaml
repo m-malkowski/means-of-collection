@@ -6,7 +6,6 @@ isGift: false
 tags:
   - Star Wars
   - Ultimate Collector Series
-retailPrice: 649.99
 purchasePrice: null
 images:
   - lego/75367.jpg
@@ -19,3 +18,5 @@ yearReleased: 2023
 yearRetired: 2026
 links:
   - url: https://www.lego.com/en-de/product/venator-class-republic-attack-cruiser-75367
+referenceRetailPrice: 649.99
+genuinePrice: 140.99

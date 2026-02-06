@@ -6,7 +6,6 @@ isGift: false
 tags:
   - Star Wars
   - Helmet Collection
-retailPrice: 59.99
 images:
   - lego/75277.jpg
 dateAdded: '2026-02-04'
@@ -17,3 +16,6 @@ yearReleased: 2020
 yearRetired: 2022
 links:
   - url: https://www.lego.com/en-de/product/boba-fett-helmet-75277
+  - url: https://de.aliexpress.com/item/1005010104276022.html?spm=a2g0o.productlist.main.13.6b26774eBOQEoU&algo_pvid=0dc95ddf-6332-4927-aaab-487448aa484f&algo_exp_id=0dc95ddf-6332-4927-aaab-487448aa484f-12&pdp_ext_f=%7B%22order%22%3A%2282%22%2C%22eval%22%3A%221%22%2C%22fromPage%22%3A%22search%22%7D&pdp_npi=6%40dis%21EUR%2142.51%2118.79%21%21%21339.27%21149.96%21%40211b655217704125820195944e0e90%2112000051159795531%21sea%21DE%21171554418%21X%211%210%21n_tag%3A-29919%3Bd%3A21e8c569%3Bm03_new_user%3A-29895%3BpisId%3A5000000200524260&curPageLogUid=VH8C3VIKlzkv&utparam-url=scene%3Asearch%7Cquery_from%3A%7Cx_object_id%3A1005010104276022%7C_p_origin_prod%3A
+referenceRetailPrice: 59.99
+genuinePrice: 18.99

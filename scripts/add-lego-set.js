@@ -47,7 +47,8 @@ fs.createReadStream(csvPath)
       status: 'wishlist',
       isGift: false,
       tags: [found.Theme, found.Subtheme].filter(Boolean),
-      retailPrice: parseFloat(found.DERetailPrice) || 0,
+      referenceRetailPrice: parseFloat(found.DERetailPrice) || 0,
+      genuinePrice: parseFloat(found.DERetailPrice) || 0,
       purchasePrice: '',
       links: [
         {

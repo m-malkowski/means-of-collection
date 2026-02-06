@@ -5,7 +5,6 @@ status: owned
 isGift: false
 tags:
   - Star Wars
-retailPrice: 99.99
 purchasePrice: 69.99
 notes: First one
 images:
@@ -19,3 +18,5 @@ yearReleased: 2022
 yearRetired: 2027
 links:
   - url: https://www.lego.com/en-de/product/r2-d2-75379
+referenceRetailPrice: 99.99
+genuinePrice: 67.99

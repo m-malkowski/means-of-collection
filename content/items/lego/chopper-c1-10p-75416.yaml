@@ -6,7 +6,6 @@ isGift: false
 tags:
   - Star Wars
   - Ahsoka
-retailPrice: 109.99
 images:
   - lego/75416.jpg
 dateAdded: '2026-02-04'
@@ -17,3 +16,5 @@ yearReleased: 2025
 yearRetired: 2027
 links:
   - url: https://www.lego.com/en-de/product/chopper-c1-10p-75416
+referenceRetailPrice: 109.99
+genuinePrice: 77.99

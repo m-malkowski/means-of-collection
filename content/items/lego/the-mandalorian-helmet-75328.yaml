@@ -6,7 +6,6 @@ isGift: false
 tags:
   - Star Wars
   - Helmet Collection
-retailPrice: 69.99
 images:
   - lego/75328.jpg
 dateAdded: '2026-02-04'
@@ -17,3 +16,5 @@ yearReleased: 2022
 yearRetired: 2026
 links:
   - url: https://www.lego.com/en-de/product/the-mandalorian-helmet-75328
+referenceRetailPrice: 69.99
+genuinePrice: 29.99

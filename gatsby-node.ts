@@ -81,7 +81,8 @@ export const createSchemaCustomization: GatsbyNode["createSchemaCustomization"] 
       status: String!
       isGift: Boolean!
       tags: [String]
-      retailPrice: Float
+      referenceRetailPrice: Float
+      genuinePrice: Float
       purchasePrice: Float
       links: [ItemLinkYaml]
       notes: String

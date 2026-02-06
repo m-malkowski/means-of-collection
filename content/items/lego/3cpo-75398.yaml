@@ -5,7 +5,6 @@ status: wishlist
 isGift: true
 tags:
   - Star Wars
-retailPrice: 139.99
 purchasePrice: null
 images:
   - lego/75398.png
@@ -18,3 +17,6 @@ yearReleased: 2022
 yearRetired: 2027
 links:
   - url: https://www.lego.com/en-de/product/c-3po-75398
+  - url: https://steinehelden.de/lego-star-wars-c-3po-b-75398-baubarer-droide/?affiliateCode=idealo
+referenceRetailPrice: 139.99
+genuinePrice: 103.08

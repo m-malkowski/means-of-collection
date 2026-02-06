@@ -2,11 +2,10 @@ id: lego-captain-rex-helmet-75349
 name: Captain Rex Helmet
 category: lego
 status: wishlist
-isGift: false
+isGift: true
 tags:
   - Star Wars
   - Helmet Collection
-retailPrice: 69.99
 images:
   - lego/75349.jpg
 dateAdded: '2026-02-04'
@@ -17,3 +16,5 @@ yearReleased: 2023
 yearRetired: 2026
 links:
   - url: https://www.lego.com/en-de/product/captain-rex-helmet-75349
+referenceRetailPrice: 69.99
+genuinePrice: 48.99

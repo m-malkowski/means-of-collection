@@ -17,7 +17,8 @@
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage",
     "add-lego-set": "node scripts/add-lego-set.js",
-    "fix-yaml": "node scripts/fix-yaml.js"
+    "fix-yaml": "node scripts/fix-yaml.js",
+    "migrate-pricing": "node scripts/migrate-pricing.js"
   },
   "repository": {
     "type": "git",

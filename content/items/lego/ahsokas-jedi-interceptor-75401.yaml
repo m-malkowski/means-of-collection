@@ -2,11 +2,10 @@ id: lego-ahsokas-jedi-interceptor-75401
 name: Ahsoka's Jedi Interceptor
 category: lego
 status: wishlist
-isGift: false
+isGift: true
 tags:
   - Star Wars
   - The Clone Wars
-retailPrice: 44.99
 images:
   - lego/75401.jpg
 dateAdded: '2026-02-04'
@@ -17,3 +16,5 @@ yearReleased: 2025
 yearRetired: 2026
 links:
   - url: https://www.lego.com/en-de/product/ahsokas-jedi-interceptor-75401
+referenceRetailPrice: 44.99
+genuinePrice: 29.67

@@ -6,7 +6,6 @@ isGift: false
 tags:
   - Star Wars
   - Helmet Collection
-retailPrice: 79.99
 images:
   - lego/75429.jpg
 dateAdded: '2026-02-04'
@@ -17,3 +16,6 @@ yearReleased: 2025
 yearRetired: 2026
 links:
   - url: https://www.lego.com/en-de/product/at-at-driver-helmet-75429
+  - url: https://de.aliexpress.com/item/1005010209104655.html?spm=a2g0o.productlist.main.22.8fb1772ft1AZEL&algo_pvid=b73c44aa-8975-4fe4-b434-4cdcf76ebde2&algo_exp_id=b73c44aa-8975-4fe4-b434-4cdcf76ebde2-21&pdp_ext_f=%7B%22order%22%3A%22381%22%2C%22eval%22%3A%221%22%2C%22fromPage%22%3A%22search%22%7D&pdp_npi=6%40dis%21EUR%2140.49%2117.89%21%21%21323.14%21142.77%21%40210384b217704126884467882ecc68%2112000051526084990%21sea%21DE%21171554418%21X%211%210%21n_tag%3A-29919%3Bd%3A21e8c569%3Bm03_new_user%3A-29895%3BpisId%3A5000000200524260&curPageLogUid=0iDnvxY97H0S&utparam-url=scene%3Asearch%7Cquery_from%3A%7Cx_object_id%3A1005010209104655%7C_p_origin_prod%3A
+referenceRetailPrice: 79.99
+genuinePrice: 22.99

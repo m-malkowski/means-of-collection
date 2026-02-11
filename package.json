@@ -34,7 +34,7 @@
   "dependencies": {
     "csv-parser": "^3.2.0",
     "fuse.js": "^7.1.0",
-    "gatsby": "^5.16.0",
+    "gatsby": "^5.16.1",
     "gatsby-plugin-image": "^3.16.0",
     "gatsby-plugin-react-helmet": "^6.16.0",
     "gatsby-plugin-sharp": "^5.16.0",

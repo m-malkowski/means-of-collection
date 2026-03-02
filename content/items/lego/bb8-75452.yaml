@@ -1,16 +1,16 @@
 id: lego-bb8-75452
 name: BB-8™ Astromech Droid
 category: lego
-status: wishlist
+status: owned
 isGift: true
 tags:
   - Star Wars
   - Episode VII
-purchasePrice: null
+purchasePrice: 59.99
 images:
   - lego/75452.jpg
 dateAdded: '2026-02-04'
-dateBought: null
+dateBought: '2026-03-01'
 setId: '75452'
 partCount: 569
 minifigCount: 1

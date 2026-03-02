@@ -1,14 +1,16 @@
 id: lego-darth-vader-helmet-75304
 name: Darth Vader Helmet
 category: lego
-status: wishlist
-isGift: false
+status: owned
+isGift: true
 tags:
   - Star Wars
   - Helmet Collection
 images:
   - lego/75304.jpg
 dateAdded: '2026-02-04'
+dateBought: '2026-03-01'
+purchasePrice: 79.99
 setId: '75304'
 partCount: 834
 minifigCount: 0
